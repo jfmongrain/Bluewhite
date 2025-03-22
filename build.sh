@@ -69,7 +69,7 @@ dnf5 -y remove yaru-theme
 dnf5 -y remove gnome-shell-extension-tailscale-gnome-qs
 dnf5 -y remove input-remapper
 dnf5 -y remove google-noto-fonts-all
-dnf5 -y remove google-noto-sans-fonts
+dnf5 -y remove google-noto-sans-fonts-all
 
 #dnf5 -y remove google-noto-sans-balinese-fonts
 #dnf5 -y remove google-noto-sans-cjk-fonts
