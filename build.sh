@@ -72,6 +72,10 @@ dnf5 -y remove gnome-shell-extension-tailscale-gnome-qs
 dnf5 -y remove input-remapper
 dnf5 -y remove google-noto-fonts-all
 
+# Install Mega
+
+wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && sudo dnf install "$PWD/megasync-Fedora_41.x86_64.rpm"
+
 # Disable COPR repos
 
 dnf5 -y copr disable ilyaz/LACT
