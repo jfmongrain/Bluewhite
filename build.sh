@@ -30,7 +30,7 @@ dnf5 -y install langpacks-core-fr
 dnf5 -y install langpacks-fr
 dnf5 -y install lact-libadwaita
 dnf5 -y install hblock
-dnf5 -y install @cosmic-desktop-environment
+#dnf5 -y install @cosmic-desktop-environment
 
 # Remove packages
 
