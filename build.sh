@@ -90,7 +90,7 @@ dnf5 -y remove google-noto-sans-kannada-vf-fonts
 dnf5 -y remove google-noto-sans-khmer-vf-fonts
 dnf5 -y remove google-noto-sans-lao-vf-fonts
 dnf5 -y remove google-noto-sans-meetei-mayek-vf-fonts
-dnf5 -y remove google-noto-sans-mono-vf-fonts
+#dnf5 -y remove google-noto-sans-mono-vf-fonts
 dnf5 -y remove google-noto-sans-ol-chiki-vf-fonts
 dnf5 -y remove google-noto-sans-oriya-vf-fonts
 dnf5 -y remove google-noto-sans-sinhala-vf-fonts
@@ -100,7 +100,7 @@ dnf5 -y remove google-noto-sans-tamil-vf-fonts
 dnf5 -y remove google-noto-sans-telugu-vf-fonts
 dnf5 -y remove google-noto-sans-thaana-vf-fonts
 dnf5 -y remove google-noto-sans-thai-vf-fonts
-dnf5 -y remove google-noto-sans-vf-fonts
+#dnf5 -y remove google-noto-sans-vf-fonts
 dnf5 -y remove google-noto-serif-armenian-vf-fonts
 dnf5 -y remove google-noto-serif-bengali-vf-fonts
 dnf5 -y remove google-noto-serif-devanagari-vf-fonts
