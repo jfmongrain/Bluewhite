@@ -35,42 +35,42 @@ dnf5 -y install hblock
 
 # Remove packages
 
-dnf5 -y uninstall ibus-hangul
-dnf5 -y uninstall ibus-libpinyin
-dnf5 -y uninstall ibus-anthy
-dnf5 -y uninstall ibus-anthy-python
-dnf5 -y uninstall ibus-m17n
-dnf5 -y uninstall gnome-tour
-dnf5 -y uninstall yelp
-dnf5 -y uninstall solaar
-dnf5 -y uninstall input-leap
-dnf5 -y uninstall simple-scan
-dnf5 -y uninstall gnome-system-monitor
+dnf5 -y remove ibus-hangul
+dnf5 -y remove ibus-libpinyin
+dnf5 -y remove ibus-anthy
+dnf5 -y remove ibus-anthy-python
+dnf5 -y remove ibus-m17n
+dnf5 -y remove gnome-tour
+dnf5 -y remove yelp
+dnf5 -y remove solaar
+dnf5 -y remove input-leap
+dnf5 -y remove simple-scan
+dnf5 -y remove gnome-system-monitor
       #- gnome-classic-session
       #- gnome-shell-extension-apps-menu
       #- gnome-shell-extension-logo-menu
       #- gnome-shell-extension-launch-new-instance
       #- gnome-shell-extension-places-menu
-dnf5 -y uninstall gnome-shell-extension-appindicator
-dnf5 -y uninstall gnome-shell-extension-dash-to-dock
-dnf5 -y uninstall gnome-shell-extension-caffeine
+dnf5 -y remove gnome-shell-extension-appindicator
+dnf5 -y remove gnome-shell-extension-dash-to-dock
+dnf5 -y remove gnome-shell-extension-caffeine
       #- gnome-shell-extension-window-list
-dnf5 -y uninstall gnome-shell-extension-blur-my-shell
-dnf5 -y uninstall gnome-shell-extension-search-light
-dnf5 -y uninstall gnome-shell-extension-user-theme
-dnf5 -y uninstall nautilus-gsconnect
-dnf5 -y uninstall gnome-shell-extension-gsconnect
-dnf5 -y uninstall gnome-shell-theme-yaru
-dnf5 -y uninstall yaru-sound-theme
-dnf5 -y uninstall yaru-icon-theme
-dnf5 -y uninstall yaru-gtksourceview-theme
-dnf5 -y uninstall yaru-gtk4-theme
-dnf5 -y uninstall yaru-gtk3-theme
-dnf5 -y uninstall yaru-gtk2-theme
-dnf5 -y uninstall yaru-theme
-dnf5 -y uninstall gnome-shell-extension-tailscale-gnome-qs
-dnf5 -y uninstall input-remapper
-dnf5 -y uninstall google-noto-fonts-all
+dnf5 -y remove gnome-shell-extension-blur-my-shell
+dnf5 -y remove gnome-shell-extension-search-light
+dnf5 -y remove gnome-shell-extension-user-theme
+dnf5 -y remove nautilus-gsconnect
+dnf5 -y remove gnome-shell-extension-gsconnect
+dnf5 -y remove gnome-shell-theme-yaru
+dnf5 -y remove yaru-sound-theme
+dnf5 -y remove yaru-icon-theme
+dnf5 -y remove yaru-gtksourceview-theme
+dnf5 -y remove yaru-gtk4-theme
+dnf5 -y remove yaru-gtk3-theme
+dnf5 -y remove yaru-gtk2-theme
+dnf5 -y remove yaru-theme
+dnf5 -y remove gnome-shell-extension-tailscale-gnome-qs
+dnf5 -y remove input-remapper
+dnf5 -y remove google-noto-fonts-all
 
 # Disable COPR repos
 
