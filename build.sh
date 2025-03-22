@@ -23,7 +23,6 @@ set -ouex pipefail
 
 dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
-#- https://mega.nz/linux/repo/Fedora_%OS_VERSION%/megasync-fedora-%OS_VERSION%.repo
       
 # Install packages 
 
@@ -31,7 +30,6 @@ dnf5 -y install langpacks-core-fr
 dnf5 -y install langpacks-fr
 dnf5 -y install lact-libadwaita
 dnf5 -y install hblock
-#- megasync
 
 # Remove packages
 
@@ -76,18 +74,10 @@ dnf5 -y remove google-noto-sans-cjk-fonts
 dnf5 -y remove google-noto-sans-javanese-fonts
 dnf5 -y remove google-noto-sans-sundanese-fonts
 
-# Install Mega
-
-#wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && dnf install -y "$PWD/megasync-Fedora_41.x86_64.rpm"
-
 # Disable COPR repos
 
 dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
-
-# Overwrite /etc/environment
-
-#cp /etc/environment /etc/environment
 
 #### Example for enabling a System Unit File
 
