@@ -46,7 +46,7 @@ dnf5 -y remove solaar
 dnf5 -y remove input-leap
 dnf5 -y remove simple-scan
 dnf5 -y remove gnome-system-monitor
-dnf5 -y  gnome-classic-session
+#dnf5 -y  gnome-classic-session
 dnf5 -y gnome-shell-extension-apps-menu
 dnf5 -y gnome-shell-extension-logo-menu
 dnf5 -y gnome-shell-extension-launch-new-instance
