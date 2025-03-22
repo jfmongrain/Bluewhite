@@ -74,7 +74,7 @@ dnf5 -y remove google-noto-fonts-all
 
 # Install Mega
 
-wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && dnf install -y "$PWD/megasync-Fedora_41.x86_64.rpm"
+#wget https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm && dnf install -y "$PWD/megasync-Fedora_41.x86_64.rpm"
 
 # Disable COPR repos
 
