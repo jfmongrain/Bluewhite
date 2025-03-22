@@ -68,13 +68,61 @@ dnf5 -y remove yaru-gtk2-theme
 dnf5 -y remove yaru-theme
 dnf5 -y remove gnome-shell-extension-tailscale-gnome-qs
 dnf5 -y remove input-remapper
+
+# Remove unused fonts
+
 dnf5 -y remove google-noto-fonts-all
-dnf5 -y remove google-noto-fonts-common
-#dnf5 -y remove google-noto-sans-balinese-fonts
-#dnf5 -y remove google-noto-sans-cjk-fonts
-#dnf5 -y remove google-noto-sans-javanese-fonts
-#dnf5 -y remove google-noto-sans-sundanese-fonts
-#dnf5 -y autoremove
+dnf5 -y remove google-noto-sans-mono-cjk-vf-fonts
+dnf5 -y remove google-noto-serif-cjk-vf-fonts
+dnf5 -y remove google-noto-naskh-arabic-vf-fonts
+dnf5 -y remove google-noto-sans-arabic-vf-fonts
+dnf5 -y remove google-noto-sans-armenian-vf-fonts
+dnf5 -y remove google-noto-sans-bengali-vf-fonts
+dnf5 -y remove google-noto-sans-canadian-aboriginal-vf-fonts
+dnf5 -y remove google-noto-sans-cherokee-vf-fonts
+dnf5 -y remove google-noto-sans-devanagari-vf-fonts
+dnf5 -y remove google-noto-sans-ethiopic-vf-fonts
+dnf5 -y remove google-noto-sans-georgian-vf-fonts
+dnf5 -y remove google-noto-sans-gujarati-vf-fonts
+dnf5 -y remove google-noto-sans-gurmukhi-vf-fonts
+dnf5 -y remove google-noto-sans-hebrew-vf-fonts
+dnf5 -y remove google-noto-sans-kannada-vf-fonts
+dnf5 -y remove google-noto-sans-khmer-vf-fonts
+dnf5 -y remove google-noto-sans-lao-vf-fonts
+dnf5 -y remove google-noto-sans-meetei-mayek-vf-fonts
+dnf5 -y remove google-noto-sans-mono-vf-fonts
+dnf5 -y remove google-noto-sans-ol-chiki-vf-fonts
+dnf5 -y remove google-noto-sans-oriya-vf-fonts
+dnf5 -y remove google-noto-sans-sinhala-vf-fonts
+dnf5 -y remove google-noto-sans-symbols-2-fonts
+dnf5 -y remove google-noto-sans-symbols-vf-fonts
+dnf5 -y remove google-noto-sans-tamil-vf-fonts
+dnf5 -y remove google-noto-sans-telugu-vf-fonts
+dnf5 -y remove google-noto-sans-thaana-vf-fonts
+dnf5 -y remove google-noto-sans-thai-vf-fonts
+dnf5 -y remove google-noto-sans-vf-fonts
+dnf5 -y remove google-noto-serif-armenian-vf-fonts
+dnf5 -y remove google-noto-serif-bengali-vf-fonts
+dnf5 -y remove google-noto-serif-devanagari-vf-fonts
+dnf5 -y remove google-noto-serif-ethiopic-vf-fonts
+dnf5 -y remove google-noto-serif-georgian-vf-fonts
+dnf5 -y remove google-noto-serif-gujarati-vf-fonts
+dnf5 -y remove google-noto-serif-gurmukhi-vf-fonts
+dnf5 -y remove google-noto-serif-hebrew-vf-fonts
+dnf5 -y remove google-noto-serif-kannada-vf-fonts
+dnf5 -y remove google-noto-serif-khmer-vf-fonts
+dnf5 -y remove google-noto-serif-lao-vf-fonts
+dnf5 -y remove google-noto-serif-oriya-vf-fonts
+dnf5 -y remove google-noto-serif-sinhala-vf-fonts
+dnf5 -y remove google-noto-serif-tamil-vf-fonts
+dnf5 -y remove google-noto-serif-telugu-vf-fonts
+dnf5 -y remove google-noto-serif-thai-vf-fonts
+dnf5 -y remove google-noto-serif-vf-fonts
+dnf5 -y remove google-noto-sans-balinese-fonts
+dnf5 -y remove google-noto-sans-cjk-fonts
+dnf5 -y remove google-noto-sans-javanese-fonts
+dnf5 -y remove google-noto-sans-sundanese-fonts
+dnf5 -y autoremove
 
 # Disable COPR repos
 
