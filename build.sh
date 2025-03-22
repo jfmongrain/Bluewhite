@@ -46,15 +46,15 @@ dnf5 -y remove solaar
 dnf5 -y remove input-leap
 dnf5 -y remove simple-scan
 dnf5 -y remove gnome-system-monitor
-      #- gnome-classic-session
-      #- gnome-shell-extension-apps-menu
-      #- gnome-shell-extension-logo-menu
-      #- gnome-shell-extension-launch-new-instance
-      #- gnome-shell-extension-places-menu
+dnf5 -y  gnome-classic-session
+dnf5 -y gnome-shell-extension-apps-menu
+dnf5 -y gnome-shell-extension-logo-menu
+dnf5 -y gnome-shell-extension-launch-new-instance
+dnf5 -y gnome-shell-extension-places-menu
 dnf5 -y remove gnome-shell-extension-appindicator
 dnf5 -y remove gnome-shell-extension-dash-to-dock
 dnf5 -y remove gnome-shell-extension-caffeine
-      #- gnome-shell-extension-window-list
+dnf5 -y gnome-shell-extension-window-list
 dnf5 -y remove gnome-shell-extension-blur-my-shell
 dnf5 -y remove gnome-shell-extension-search-light
 dnf5 -y remove gnome-shell-extension-user-theme
@@ -76,6 +76,10 @@ dnf5 -y remove google-noto-fonts-all
 
 dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
+
+# Overwrite /etc/environment
+
+cp environment /etc/
 
 #### Example for enabling a System Unit File
 
