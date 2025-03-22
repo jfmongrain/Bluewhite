@@ -14,7 +14,7 @@ FROM ghcr.io/ublue-os/bluefin:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-COPY system_files/silverblue /
+COPY system_files/silverblue/ /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
