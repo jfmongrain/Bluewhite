@@ -117,7 +117,7 @@ dnf5 -y remove google-noto-serif-sinhala-vf-fonts
 dnf5 -y remove google-noto-serif-tamil-vf-fonts
 dnf5 -y remove google-noto-serif-telugu-vf-fonts
 dnf5 -y remove google-noto-serif-thai-vf-fonts
-dnf5 -y remove google-noto-serif-vf-fonts
+#dnf5 -y remove google-noto-serif-vf-fonts
 dnf5 -y remove google-noto-sans-balinese-fonts
 dnf5 -y remove google-noto-sans-cjk-fonts
 dnf5 -y remove google-noto-sans-javanese-fonts
