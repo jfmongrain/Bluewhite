@@ -26,53 +26,55 @@ dnf5 -y copr enable pesader/hblock
       
 # Install packages 
 
-dnf5 -y install langpacks-core-fr
-dnf5 -y install langpacks-fr
-dnf5 -y install lact-libadwaita
-dnf5 -y install hblock
-#dnf5 -y install @cosmic-desktop-environment
+dnf5 -y install\
+ langpacks-core-fr\
+ langpacks-fr\
+ lact-libadwaita\
+ hblock
 
 # Remove packages
 
-dnf5 -y remove ibus-hangul
-dnf5 -y remove ibus-libpinyin
-dnf5 -y remove ibus-anthy
-dnf5 -y remove ibus-anthy-python
-dnf5 -y remove ibus-m17n
-dnf5 -y remove gnome-tour
-dnf5 -y remove yelp
-dnf5 -y remove solaar
-dnf5 -y remove input-leap
-dnf5 -y remove simple-scan
-dnf5 -y remove gnome-system-monitor
-dnf5 -y remove gnome-classic-session
-dnf5 -y remove gnome-shell-extension-apps-menu
-dnf5 -y remove gnome-shell-extension-logo-menu
-dnf5 -y remove gnome-shell-extension-launch-new-instance
-dnf5 -y remove gnome-shell-extension-places-menu
-dnf5 -y remove gnome-shell-extension-appindicator
-dnf5 -y remove gnome-shell-extension-dash-to-dock
-dnf5 -y remove gnome-shell-extension-caffeine
-dnf5 -y remove gnome-shell-extension-window-list
-dnf5 -y remove gnome-shell-extension-blur-my-shell
-dnf5 -y remove gnome-shell-extension-search-light
-dnf5 -y remove gnome-shell-extension-user-theme
-dnf5 -y remove nautilus-gsconnect
-dnf5 -y remove gnome-shell-extension-gsconnect
-dnf5 -y remove gnome-shell-theme-yaru
-dnf5 -y remove yaru-sound-theme
-dnf5 -y remove yaru-icon-theme
-dnf5 -y remove yaru-gtksourceview-theme
-dnf5 -y remove yaru-gtk4-theme
-dnf5 -y remove yaru-gtk3-theme
-dnf5 -y remove yaru-gtk2-theme
-dnf5 -y remove yaru-theme
-dnf5 -y remove gnome-shell-extension-tailscale-gnome-qs
-dnf5 -y remove input-remapper
+dnf5 -y remove\
+ ibus-hangul\
+ ibus-libpinyin\
+ ibus-anthy\
+ ibus-anthy-python\
+ ibus-m17n\
+ gnome-tour\
+ yelp\
+ solaar\
+ input-leap\
+ simple-scan\
+ gnome-system-monitor\
+ gnome-classic-session\
+ gnome-shell-extension-apps-menu\
+ gnome-shell-extension-logo-menu\
+ gnome-shell-extension-launch-new-instance\
+ gnome-shell-extension-places-menu\
+ gnome-shell-extension-appindicator\
+ gnome-shell-extension-dash-to-dock\
+ gnome-shell-extension-caffeine\
+ gnome-shell-extension-window-list\
+ gnome-shell-extension-blur-my-shell\
+ gnome-shell-extension-search-light\
+ gnome-shell-extension-user-theme\
+ gnome-shell-extension-tailscale-gnome-qs\
+ nautilus-gsconnect\
+ gnome-shell-extension-gsconnect\
+ gnome-shell-theme-yaru\
+ yaru-sound-theme\
+ yaru-icon-theme\
+ yaru-gtksourceview-theme\
+ yaru-gtk4-theme\
+ yaru-gtk3-theme\
+ yaru-gtk2-theme\
+ yaru-theme\
+ input-remapper
 
 # Remove unused fonts
 
-dnf5 -y remove google-noto-fonts-all\
+dnf5 -y remove\ 
+ google-noto-fonts-all\
  google-noto-sans-mono-cjk-vf-fonts\
  google-noto-serif-cjk-vf-fonts\
  google-noto-naskh-arabic-vf-fonts\
