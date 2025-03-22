@@ -79,7 +79,7 @@ dnf5 -y copr disable pesader/hblock
 
 # Overwrite /etc/environment
 
-cp environment /etc/
+cp /environment /etc/
 
 #### Example for enabling a System Unit File
 
