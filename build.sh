@@ -73,7 +73,7 @@ dnf5 -y remove\
 
 # Remove unused fonts
 
-dnf5 -y remove\ 
+dnf5 -y remove\
  google-noto-fonts-all\
  google-noto-sans-mono-cjk-vf-fonts\
  google-noto-serif-cjk-vf-fonts\
