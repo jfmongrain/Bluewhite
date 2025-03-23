@@ -13,7 +13,6 @@ set -ouex pipefail
 
 dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
-#dnf5 -y copr enable tofik/SteelSeries
       
 # Install packages 
 
@@ -21,7 +20,6 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 lact-libadwaita \
-#steelseries-installer \
 hblock
 
 # Remove packages
@@ -121,7 +119,6 @@ dnf5 -y autoremove
 
 dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
-#dnf5 -y copr disable tofik/SteelSeries
 
 #### Example for enabling a System Unit File
 
