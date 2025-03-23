@@ -1,4 +1,4 @@
-aFROM ghcr.io/ublue-os/bluefin:beta
+FROM ghcr.io/ublue-os/bluefin:beta
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
