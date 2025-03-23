@@ -115,6 +115,12 @@ google-noto-sans-sundanese-fonts
 
 dnf5 -y autoremove
 
+# Remove desktop entries
+
+rm /usr/share/applications/system-update.desktop
+rm /usr/share/applications/documentation.dektop
+rm /usr/share/applications/discourse.dektop
+
 # Disable COPR repos
 
 dnf5 -y copr disable ilyaz/LACT
