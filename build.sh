@@ -59,7 +59,6 @@ yaru-gtk4-theme \
 yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
-malcontent \
 input-remapper
 
 # Remove unused fonts
