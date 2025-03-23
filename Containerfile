@@ -15,6 +15,9 @@ FROM ghcr.io/ublue-os/bluefin:latest
 
 COPY build.sh /tmp/build.sh
 COPY system_files/ /
+RUN rm /usr/share/applications/system-update.desktop
+RUN rm /usr/share/applications/documentation.dektop
+RUN rm /usr/share/applications/discourse.dektop
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
