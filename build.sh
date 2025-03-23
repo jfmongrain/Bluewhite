@@ -117,9 +117,9 @@ dnf5 -y autoremove
 
 # Remove desktop entries
 
-rm /usr/share/applications/system-update.desktop
-rm /usr/share/applications/documentation.dektop
-rm /usr/share/applications/discourse.dektop
+#rm /usr/share/applications/system-update.desktop
+#rm /usr/share/applications/documentation.dektop
+#rm /usr/share/applications/discourse.dektop
 
 # Disable COPR repos
 
