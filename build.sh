@@ -9,6 +9,12 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+# Remove files from image
+
+rm /usr/share/applications/system-update.desktop
+rm /usr/share/applications/documentation.dektop
+rm /usr/share/applications/discourse.dektop
+
 # Enable COPR repos
 
 dnf5 -y copr enable ilyaz/LACT
