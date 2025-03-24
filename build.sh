@@ -13,6 +13,7 @@ set -ouex pipefail
 
 dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
+dnf5 -y copr enable birkch/HeadsetControl
       
 # Install packages 
 
@@ -20,7 +21,8 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 lact-libadwaita \
-hblock
+hblock \
+HeadsetControl
 
 # Remove packages
 
@@ -115,16 +117,11 @@ google-noto-sans-sundanese-fonts
 
 dnf5 -y autoremove
 
-# Remove desktop entries
-
-#rm /usr/share/applications/system-update.desktop
-#rm /usr/share/applications/documentation.dektop
-#rm /usr/share/applications/discourse.dektop
-
 # Disable COPR repos
 
 dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
+dnf5 -y copr disable birkch/HeadsetControl
 
 #### Example for enabling a System Unit File
 
