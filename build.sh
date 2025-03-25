@@ -14,6 +14,7 @@ set -ouex pipefail
 dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
 dnf5 -y copr enable birkch/HeadsetControl
+sudo dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
       
 # Install packages 
 
@@ -22,7 +23,8 @@ langpacks-core-fr \
 langpacks-fr \
 lact-libadwaita \
 hblock \
-HeadsetControl
+HeadsetControl \
+mullvad-vpn
 
 # Remove packages
 
