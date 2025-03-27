@@ -15,15 +15,6 @@ dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
 dnf5 -y copr enable birkch/HeadsetControl
 
-# Install packages 
-
-dnf5 -y install \
-langpacks-core-fr \
-langpacks-fr \
-lact-libadwaita \
-hblock \
-HeadsetControl
-
 # Remove packages
 
 dnf5 -y remove \
@@ -60,8 +51,8 @@ yaru-gtk4-theme \
 yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
-input-remapper
-#gnome-system-monitor \
+input-remapper \
+gnome-system-monitor
 
 # Remove unused fonts
 
@@ -114,6 +105,18 @@ google-noto-sans-balinese-fonts \
 google-noto-sans-cjk-fonts \
 google-noto-sans-javanese-fonts \
 google-noto-sans-sundanese-fonts
+
+# Install packages 
+
+dnf5 -y install \
+langpacks-core-fr \
+langpacks-fr \
+lact-libadwaita \
+hblock \
+HeadsetControl \
+gnome-system-monitor
+
+# Clean dependencies
 
 dnf5 -y autoremove
 
