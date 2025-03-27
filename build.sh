@@ -37,7 +37,6 @@ yelp \
 solaar \
 input-leap \
 simple-scan \
-gnome-system-monitor \
 gnome-classic-session \
 gnome-shell-extension-apps-menu \
 gnome-shell-extension-logo-menu \
@@ -62,6 +61,7 @@ yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
 input-remapper
+#gnome-system-monitor \
 
 # Remove unused fonts
 
