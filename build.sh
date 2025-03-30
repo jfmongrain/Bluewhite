@@ -114,7 +114,8 @@ langpacks-fr \
 lact-libadwaita \
 hblock \
 HeadsetControl \
-gnome-system-monitor
+gnome-system-monitor \
+hplip
 
 # Clean dependencies
 
