@@ -114,10 +114,7 @@ langpacks-fr \
 lact-libadwaita \
 hblock \
 HeadsetControl \
-gnome-system-monitor \
-python3-qt4 \
-python3-qt5 \
-hplip-gui
+gnome-system-monitor
 
 # Clean dependencies
 
