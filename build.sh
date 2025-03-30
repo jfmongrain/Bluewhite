@@ -115,8 +115,8 @@ lact-libadwaita \
 hblock \
 HeadsetControl \
 gnome-system-monitor \
-pyqt-4 \
-pyqt-5
+python3-qt4 \
+python3-qt5
 
 # Clean dependencies
 
