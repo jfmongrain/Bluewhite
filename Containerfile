@@ -16,6 +16,7 @@ FROM ghcr.io/ublue-os/bluefin:beta
 COPY build.sh /tmp/build.sh
 COPY system_files/ /
 COPY hplip.zip /
+COPY HP.zip /
 
 RUN rm /usr/share/applications/system-update.desktop
 RUN rm /usr/share/applications/documentation.desktop
