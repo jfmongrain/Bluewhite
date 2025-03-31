@@ -129,6 +129,7 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 # Install hplip proprietary drivers
 
+mkdir /root
 mkdir /root/.hplip
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
