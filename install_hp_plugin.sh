@@ -23,7 +23,7 @@ set timeout 10
 exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
 
-# Run the hp-plugin command
+# Run the hp-plugin command and capture output
 spawn runuser -u dummy -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
 
 # Log all output to the console
@@ -47,9 +47,6 @@ expect {
 
 # Wait for the end of the command
 expect eof
-
-# Clean up: remove downloaded files
-exec rm -f hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
 EOF
 
 # Make the expect script executable
@@ -57,6 +54,9 @@ chmod +x install_hp_plugin.exp
 
 # Run the expect script
 ./install_hp_plugin.exp
+
+# Capture the exit status of the expect script
+status=$?
 
 # Clean up: remove the expect script after execution
 rm -f install_hp_plugin.exp
@@ -67,3 +67,6 @@ dnf5 remove -y expect
 # Remove the dummy user
 userdel -r dummy
 echo "User dummy removed."
+
+# Exit with the status of the expect script
+exit $status
