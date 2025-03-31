@@ -30,7 +30,7 @@ expect {
         exp_continue
     }
     "Please enter the sudoer (dummy)'s password:" {
-        sleep 1  ;# Add a delay before sending the password
+        sleep 3  ;# Add a delay before sending the password
         send "dummy\r"
     }
     timeout {
