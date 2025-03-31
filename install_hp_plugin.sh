@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create user
-useradd -m -p $(echo "dummy" | openssl passwd -1 -stdin) dummy > /dev/null 2>&1
+useradd -m -p $(echo "password" | openssl passwd -1 -stdin) dummy > /dev/null 2>&1
 
 # Add the user to the sudoers group (assuming the group is 'wheel' for Fedora)
 usermod -aG wheel dummy
@@ -31,7 +31,7 @@ expect {
     }
     "Please enter the sudoer (dummy)'s password:" {
         sleep 3  ;# Add a delay before sending the password
-        send "dummy\r"
+        send "password\r"
     }
     timeout {
         puts "Error: Prompt not found."
