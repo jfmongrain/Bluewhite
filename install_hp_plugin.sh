@@ -3,12 +3,18 @@
 # Create user
 useradd -m -p $(echo "dummy" | openssl passwd -1 -stdin) dummy > /dev/null 2>&1
 
+# Add the user to the sudoers group (assuming the group is 'wheel' for Fedora)
+usermod -aG wheel dummy
+
 # Install expect
 dnf5 install -y expect
 
 # Create an expect script
 cat << 'EOF' > install_hp_plugin.exp
 #!/usr/bin/expect
+
+# Set a timeout for expect commands
+set timeout 10
 
 # Download the plugin .run file
 exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
