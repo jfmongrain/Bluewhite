@@ -114,8 +114,8 @@ langpacks-fr \
 lact-libadwaita \
 hblock \
 HeadsetControl \
-gnome-system-monitor \
-gnome-boxes
+gnome-system-monitor
+#gnome-boxes
 
 # Clean dependencies
 
@@ -129,11 +129,10 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 # Install hplip proprietary drivers
 
-mkdir /root
-mkdir /root/.hplip
+mkdir -p /var/roothome/
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
-sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
+sh -c "yes '' | hp-plugin -p -i hplip-3.24.4-plugin.run "
 
 
 #### Example for enabling a System Unit File
