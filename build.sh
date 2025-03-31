@@ -114,8 +114,8 @@ langpacks-fr \
 lact-libadwaita \
 hblock \
 HeadsetControl \
-gnome-system-monitor \
-gnome-boxes
+gnome-system-monitor
+#gnome-boxes
 
 # Clean dependencies
 
@@ -130,9 +130,11 @@ dnf5 -y copr disable birkch/HeadsetControl
 # Install hplip proprietary drivers
 
 #mkdir -p /var/roothome/
-#wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
-#wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
-#/usr/bin/sudo sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
+
+sh -c "echo 'dummy' | su - dummy"
+wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
+wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
+/usr/bin/sudo sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
 
 #unzip -o -d /usr/share/ hplip.zip
 #unzip -o -d /usr/share/ppd/ HP.zip
