@@ -127,6 +127,11 @@ dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
 dnf5 -y copr disable birkch/HeadsetControl
 
+# Install hplip proprietary drivers
+
+unzip -o -d /usr/share/ hplip.zip
+rm hplip.zip
+
 #### Example for enabling a System Unit File
 
 # systemctl enable podman.socket
