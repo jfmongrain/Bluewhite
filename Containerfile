@@ -25,7 +25,6 @@ RUN rm /usr/share/applications/system-update.desktop
 RUN rm /usr/share/applications/documentation.desktop
 RUN rm /usr/share/applications/discourse.desktop
 
-RUN sh createdummyuser.sh -u "dummy" -p "dummy"
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
