@@ -129,8 +129,10 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 # Install hplip proprietary drivers
 
-unzip -o -d /usr/share/ hplip.zip
-rm hplip.zip
+#unzip -o -d /usr/share/ hplip.zip
+#rm hplip.zip
+
+sh -c "yes '' | hp-plugin-download"
 
 #### Example for enabling a System Unit File
 
