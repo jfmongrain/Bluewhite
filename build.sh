@@ -130,10 +130,10 @@ dnf5 -y copr disable birkch/HeadsetControl
 # Install hplip proprietary drivers
 
 #mkdir -p /var/roothome/
-sh createdummyuser.sh -u "dummy"
+sh createdummyuser.sh -u "dummy" -p "dummy"
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
-runuser -u dummy -- /usr/bin/sudo sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
+runuser -u dummy -- /usr/bin/sudo sh -c "echo 'y' | 'dummy' | hp-plugin -p hplip-3.24.4-plugin.run"
 #unzip -o -d /usr/share/ hplip.zip
 #unzip -o -d /usr/share/ppd/ HP.zip
 
