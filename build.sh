@@ -129,10 +129,18 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 # Install hplip proprietary drivers
 
+cp /usr/bin/hp-plugin-download /usr/local/bin/hp-plugin-download-mod
+sh -c "sed -i 's|/usr/bin/curl|/usr/bin/curl --fail|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|download $${link}|if [ ! -e ~/.hplip/$${PLUGIN_FILE} ]; then download $${link}; fi|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|/usr/bin/rm -f ~/.hplip/$${PLUGIN_FILE} &> /dev/null||' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|^/usr/bin/bash.*|/usr/bin/bash ~/.hplip/$${PLUGIN_FILE} --quiet -- --interactive|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|~/.hplip|/usr/local/share/hplip|g' /usr/local/bin/hp-plugin-download-mod"
+sh -c "yes '' | /usr/local/bin/hp-plugin-download-mod"
+
 #unzip -o -d /usr/share/ hplip.zip
 #rm hplip.zip
 
-sh -c "yes '' | hp-plugin-download"
+# sh -c "yes '' | hp-plugin-download"
 
 #### Example for enabling a System Unit File
 
