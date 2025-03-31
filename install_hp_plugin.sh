@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install expect
-dnf5 install -y expect
+dnf install -y expect
 
 # Create an expect script
 cat << 'EOF' > install_hp_plugin.exp
@@ -12,8 +12,8 @@ set username "dummy"
 set password "dummy"  ;# Replace with the actual password
 
 # Create the user if it doesn't exist
-set user_exists [exec id $username]
-if {[catch {set user_exists}]} {
+set user_exists [exec getent passwd $username]
+if {[string equal $user_exists ""]} {
     # User does not exist, create it
     exec useradd -m -p [exec openssl passwd -1 $password] $username
     puts "User $username created."
@@ -35,7 +35,7 @@ expect eof
 exec rm -f hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
 
 # Uninstall expect
-exec dnf5 remove -y expect
+exec dnf remove -y expect
 
 # Remove the dummy user
 exec userdel -r $username
