@@ -131,6 +131,7 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 #mkdir -p /var/roothome/
 
+sh createdummyuser.sh -u "dummy" -p "dummy"
 sh -c "echo 'dummy' | su - dummy"
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
