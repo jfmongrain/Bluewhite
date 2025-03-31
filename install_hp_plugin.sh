@@ -21,9 +21,25 @@ exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/
 exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
 
 # Run the hp-plugin command
-spawn runuser -u dummy -- sh -c "echo 'y' | hp-plugin -p hplip-3.24.4-plugin.run"
-expect "Please enter the sudoer (dummy)'s password:"
-send "dummy\r"
+spawn runuser -u dummy -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
+
+# Handle the license agreement prompt
+expect {
+    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
+        send "y\r"
+        exp_continue
+    }
+    "Please enter the sudoer (dummy)'s password:" {
+        sleep 1  ;# Add a delay before sending the password
+        send "dummy\r"
+    }
+    timeout {
+        puts "Error: Prompt not found."
+        exit 1
+    }
+}
+
+# Wait for the end of the command
 expect eof
 
 # Clean up: remove downloaded files
