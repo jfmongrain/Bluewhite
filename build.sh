@@ -133,7 +133,7 @@ dnf5 -y copr disable birkch/HeadsetControl
 sh createdummyuser.sh -u "dummy"
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
-runuser -u dummy -- sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
+/usr/bin/sudo runuser -u dummy -- sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
 #unzip -o -d /usr/share/ hplip.zip
 #unzip -o -d /usr/share/ppd/ HP.zip
 
