@@ -136,6 +136,7 @@ sh -c "sed -i 's|/usr/bin/rm -f ~/.hplip/$${PLUGIN_FILE} &> /dev/null||' /usr/lo
 sh -c "sed -i 's|^/usr/bin/bash.*|/usr/bin/bash ~/.hplip/$${PLUGIN_FILE} --quiet -- --interactive|' /usr/local/bin/hp-plugin-download-mod"
 sh -c "sed -i 's|~/.hplip|/usr/local/share/hplip|g' /usr/local/bin/hp-plugin-download-mod"
 sh -c "yes '' | /usr/local/bin/hp-plugin-download-mod"
+rm /usr/local/bin/hp-plugin-download-mod
 
 #unzip -o -d /usr/share/ hplip.zip
 #rm hplip.zip
