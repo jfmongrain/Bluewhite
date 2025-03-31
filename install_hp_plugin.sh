@@ -11,9 +11,9 @@ cat << 'EOF' > install_hp_plugin.exp
 set username "dummy"
 set password "dummy"  ;# Replace with the actual password
 
-# Create the user if it doesn't exist
-set user_exists [exec getent passwd $username]
-if {[string equal $user_exists ""]} {
+# Check if the user exists
+set user_exists [catch {exec id $username} result]
+if {$user_exists} {
     # User does not exist, create it
     exec useradd -m -p [exec openssl passwd -1 $password] $username
     puts "User $username created."
