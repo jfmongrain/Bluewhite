@@ -22,7 +22,7 @@ exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/
 
 # Run the hp-plugin command
 spawn runuser -u dummy -- sh -c "echo 'y' | hp-plugin -p hplip-3.24.4-plugin.run"
-expect "Please enter the root/superuser password:"
+expect "Please enter the sudoer (dummy)'s password:"
 send "dummy\r"
 expect eof
 
