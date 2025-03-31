@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # Create user
-useradd -m -p $(echo "password" | openssl passwd -1 -stdin) dummy > /dev/null 2>&1
+useradd -m -p $(echo "dummy" | openssl passwd -1 -stdin) dummy > /dev/null 2>&1
 
 # Add the user to the sudoers group (assuming the group is 'wheel' for Fedora)
 usermod -aG wheel dummy
+
+# Allow the dummy user to run hp-plugin without a password
+echo "dummy ALL=(ALL) NOPASSWD: /usr/bin/hp-plugin" >> /etc/sudoers
 
 # Install expect
 dnf5 install -y expect
@@ -30,12 +33,19 @@ expect {
         exp_continue
     }
     "Please enter the sudoer (dummy)'s password:" {
-        sleep 3  ;# Add a delay before sending the password
-        send "password\r"
+        sleep 1  ;# Add a delay before sending the password
+        send "dummy\r"
     }
     timeout {
         puts "Error: Prompt not found."
         exit 1
+    }
+}
+
+# Log the output of the command
+expect {
+    -re ".*" {
+        puts "Output: $expect_out(buffer)"
     }
 }
 
