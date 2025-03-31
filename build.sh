@@ -134,8 +134,8 @@ dnf5 -y copr disable birkch/HeadsetControl
 #wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
 #/usr/bin/sudo sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
 
-unzip -d -o /usr/share/ hplip.zip
-unzip -d -o /usr/share/ppd/ HP.zip
+unzip hplip.zip -d -o /usr/share/
+unzip HP.zip -d -o /usr/share/ppd/
 
 #### Example for enabling a System Unit File
 
