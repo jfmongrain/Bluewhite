@@ -26,6 +26,9 @@ exec wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/
 # Run the hp-plugin command
 spawn runuser -u dummy -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
 
+# Log all output to the console
+log_user 1
+
 # Handle the license agreement prompt
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
@@ -39,13 +42,6 @@ expect {
     timeout {
         puts "Error: Prompt not found."
         exit 1
-    }
-}
-
-# Log the output of the command
-expect {
-    -re ".*" {
-        puts "Output: $expect_out(buffer)"
     }
 }
 
