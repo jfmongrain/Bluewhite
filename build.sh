@@ -114,8 +114,8 @@ langpacks-fr \
 lact-libadwaita \
 hblock \
 HeadsetControl \
-gnome-system-monitor
-#gnome-boxes
+gnome-system-monitor \
+gnome-boxes
 
 # Clean dependencies
 
