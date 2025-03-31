@@ -14,8 +14,8 @@ set password "dummy"  ;# Replace with the actual password
 # Check if the user exists
 set user_exists [catch {exec id $username} result]
 if {$user_exists} {
-    # User does not exist, create it without a mailbox
-    exec useradd -M -p [exec openssl passwd -1 $password] $username
+    # User does not exist, create it 
+    exec useradd -p [exec openssl passwd -1 $password] $username
     puts "User $username created."
 } else {
     puts "User $username already exists."
