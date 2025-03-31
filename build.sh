@@ -129,13 +129,8 @@ dnf5 -y copr disable birkch/HeadsetControl
 
 # Install hplip proprietary drivers
 
-#sh -c "yes '' | hp-plugin-download "
-
-mkdir plugin
-cd plugin
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
-sh hplip-3.24.4-plugin.run --tar vxf
-python installPlugin.py
+sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
 
 
 #### Example for enabling a System Unit File
