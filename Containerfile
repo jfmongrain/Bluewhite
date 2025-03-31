@@ -15,10 +15,6 @@ FROM ghcr.io/ublue-os/bluefin:beta
 
 COPY build.sh /tmp/build.sh
 COPY system_files/ /
-COPY hplip-3.24.4-plugin.run /
-COPY hplip-3.24.4-plugin.run.asc /
-RUN mkdir -p /var/roothome/
-RUN /usr/bin/sudo sh -c "yes '' | hp-plugin -p hplip-3.24.4-plugin.run "
 
 #COPY hplip.zip /
 #COPY HP.zip /
