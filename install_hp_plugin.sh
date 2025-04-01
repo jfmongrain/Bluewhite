@@ -49,7 +49,7 @@ set username [lindex $argv 0]
 set password [lindex $argv 1]
 
 # Run the hp-plugin command as the specified user
-spawn runuser -l $username -c "hp-plugin -p hplip-3.24.4-plugin.run"
+spawn runuser $username -c "hp-plugin -p hplip-3.24.4-plugin.run"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         send "y\r"
