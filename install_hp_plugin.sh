@@ -42,17 +42,20 @@ set username [lindex $argv 0]
 set password [lindex $argv 1]
 
 # Run the hp-plugin command
-spawn runuser -u $username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
+#!/usr/bin/expect
+
+# Get the username and password from the command line arguments
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+
+# Run the hp-plugin command as the specified user
+spawn runuser -l $username -c "hp-plugin -p hplip-3.24.4-plugin.run"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
-        # Delay before sending "y"
-        sleep 1
         send "y\r"
         exp_continue
     }
     -re "ExpectedPrompt 2" {
-        # Delay before sending password
-        sleep 1
         send "$password\r"
     }
 }
