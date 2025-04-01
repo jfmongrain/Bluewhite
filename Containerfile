@@ -14,12 +14,7 @@ FROM ghcr.io/ublue-os/bluefin:beta
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-COPY install_hp_plugin.sh /install_hp_plugin.sh
 COPY system_files/ /
-
-
-#COPY hplip.zip /
-#COPY HP.zip /
 
 RUN rm /usr/share/applications/system-update.desktop
 RUN rm /usr/share/applications/documentation.desktop
