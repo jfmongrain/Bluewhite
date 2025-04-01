@@ -107,6 +107,11 @@ hblock \
 gnome-system-monitor
 #lact-libadwaita
 
+#Install hp plugin
+
+sh install_hp_plugin.sh
+rm install_hp_plugin.sh
+
 # Disable COPR repos
 
 #dnf5 -y copr disable ilyaz/LACT
