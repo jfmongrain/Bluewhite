@@ -43,10 +43,15 @@ cat << EOF > install_hp_plugin.exp
 set username [lindex \$argv 0]
 set password [lindex \$argv 1]
 
-# Run the hp-plugin command with the -y option
-spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run -y"
+# Run the hp-plugin command
+spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
 expect {
-    "ExpectedPrompt" {
+    "Would you like to proceed?" {
+        sleep 1  # Delay before sending "y"
+        send "y\r"
+        exp_continue
+    }
+    -re ".*[Pp]assword.*" {
         sleep 1  # Delay before sending password
         send "\$password\r"
     }
