@@ -34,13 +34,6 @@ if ! dnf5 install -y expect spawn; then
     exit 1
 fi
 
-# Create the temporary script that runs hp-plugin as the dummy user
-cat > run_hp_plugin.sh <<EOF
-#!/bin/bash
-hp-plugin -p hplip-3.24.4-plugin.run
-EOF
-chmod +x run_hp_plugin.sh
-
 # Create the expect script that runs the temporary script as the dummy user
 cat > install_hp_plugin.exp <<EOF
 #!/usr/bin/expect
@@ -49,8 +42,7 @@ cat > install_hp_plugin.exp <<EOF
 set username [lindex \$argv 0]
 set password [lindex \$argv 1]
 
-# Run the temporary script as the specified user
-spawn runuser -l $username -c "./run_hp_plugin.sh"
+spawn runuser -l $username -c "sh hplip-3.24.4.plugin.run"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         send "y\r"
