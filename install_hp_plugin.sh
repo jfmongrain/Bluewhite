@@ -12,7 +12,7 @@ username="${1:-dummy}"
 password="${2:-password}"  # Hardcoded password for the dummy user
 
 log "Creating user $username..."
-if ! useradd -M -G wheel -p "$(openssl passwd -1 "$password")" "$username"; then
+if ! useradd -G wheel -p "$(openssl passwd -1 "$password")" "$username"; then
     log "Failed to create user $username."
     exit 1
 fi
