@@ -50,7 +50,7 @@ set username [lindex \$argv 0]
 set password [lindex \$argv 1]
 
 # Run the temporary script as the specified user
-spawn su - \$username -c "./run_hp_plugin.sh"
+spawn runuser -l $username -c "./run_hp_plugin.sh"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         send "y\r"
