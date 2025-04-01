@@ -109,8 +109,8 @@ gnome-system-monitor
 
 #Install hp plugin
 
-sh install_hp_plugin.sh
-rm install_hp_plugin.sh
+#sh install_hp_plugin.sh
+#rm install_hp_plugin.sh
 
 # Disable COPR repos
 
