@@ -35,29 +35,28 @@ if ! dnf5 install -y expect; then
 fi
 
 # Create the expect script that runs hp-plugin as the dummy user
-log "Creating expect script..."
-cat << EOF > install_hp_plugin.exp
 #!/usr/bin/expect
 
 # Get the username and password from the command line arguments
-set username [lindex \$argv 0]
-set password [lindex \$argv 1]
+set username [lindex $argv 0]
+set password [lindex $argv 1]
 
 # Run the hp-plugin command
-spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
+spawn runuser -u $username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
-        sleep 1  # Delay before sending "y"
+        # Delay before sending "y"
+        sleep 1
         send "y\r"
         exp_continue
     }
     -re "ExpectedPrompt 2" {
-        sleep 1  # Delay before sending password
-        send "\$password\r"
+        # Delay before sending password
+        sleep 1
+        send "$password\r"
     }
 }
 expect eof
-EOF
 
 # Make the expect script executable
 chmod +x install_hp_plugin.exp
