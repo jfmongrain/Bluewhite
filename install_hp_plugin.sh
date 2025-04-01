@@ -8,8 +8,8 @@ log() {
 }
 
 # Set default values for username and password
-username="${1:-dummy}"
-password="${2:-password}"  # Hardcoded password for the dummy user
+username="dummy"
+password="password"  # Hardcoded password for the dummy user
 
 log "Creating user $username..."
 if ! useradd -G wheel -p "$(openssl passwd -1 "$password")" "$username"; then
@@ -34,35 +34,34 @@ if ! dnf5 install -y expect spawn; then
     exit 1
 fi
 
-# Create the expect script that runs hp-plugin as the dummy user
+# Create the temporary script that runs hp-plugin as the dummy user
+cat > run_hp_plugin.sh <<EOF
+#!/bin/bash
+hp-plugin -p hplip-3.24.4-plugin.run
+EOF
+chmod +x run_hp_plugin.sh
+
+# Create the expect script that runs the temporary script as the dummy user
+cat > install_hp_plugin.exp <<EOF
 #!/usr/bin/expect
 
 # Get the username and password from the command line arguments
-set username [lindex $argv 0]
-set password [lindex $argv 1]
+set username [lindex \$argv 0]
+set password [lindex \$argv 1]
 
-# Run the hp-plugin command
-#!/usr/bin/expect
-
-# Get the username and password from the command line arguments
-set username [lindex $argv 0]
-set password [lindex $argv 1]
-
-# Run the hp-plugin command as the specified user
-spawn runuser -l $username -c hp-plugin -p hplip-3.24.4-plugin.run
+# Run the temporary script as the specified user
+spawn su - \$username -c "./run_hp_plugin.sh"
 expect {
     "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         send "y\r"
         exp_continue
     }
     -re "ExpectedPrompt 2" {
-        send "$password\r"
+        send "\$password\r"
     }
 }
 expect eof
-
-# Make the expect script executable
-chmod +x install_hp_plugin.exp
+EOF
 
 # Run the expect script with the username and password as arguments
 log "Running hp-plugin installation..."
@@ -71,9 +70,9 @@ if ! expect ./install_hp_plugin.exp "$username" "$password"; then
     exit 1
 fi
 
-# Clean up: delete the expect script, the downloaded files, and remove the user
+# Clean up: delete the expect script, the temporary script, the downloaded files, and remove the user
 log "Cleaning up..."
-rm -f install_hp_plugin.exp hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
+rm -f install_hp_plugin.exp run_hp_plugin.sh hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
 dnf5 remove -y expect spawn
 if ! userdel "$username"; then
     log "Failed to remove user $username."
