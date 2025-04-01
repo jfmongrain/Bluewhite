@@ -2,18 +2,10 @@
 
 set -ouex pipefail
 
-### Install packages
-
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
 # Enable COPR repos
 
-dnf5 -y copr enable ilyaz/LACT
+#dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
-dnf5 -y copr enable birkch/HeadsetControl
 
 # Remove packages
 
@@ -111,33 +103,14 @@ google-noto-sans-sundanese-fonts
 dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-lact-libadwaita \
 hblock \
-HeadsetControl \
 gnome-system-monitor
-#gnome-boxes
-
-# Clean dependencies
-
-dnf5 -y autoremove
+#lact-libadwaita
 
 # Disable COPR repos
 
-dnf5 -y copr disable ilyaz/LACT
+#dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
-dnf5 -y copr disable birkch/HeadsetControl
-
-# Install hplip proprietary drivers
-
-sh install_hp_plugin.sh
-
-#mkdir -p /var/roothome/
-#sh createdummyuser.sh -u "dummy" -p "dummy"
-#wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
-#wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc
-#runuser -u dummy -- sh -c "echo 'y' | hp-plugin -p hplip-3.24.4-plugin.run"
-#unzip -o -d /usr/share/ hplip.zip
-#unzip -o -d /usr/share/ppd/ HP.zip
 
 #### Example for enabling a System Unit File
 
