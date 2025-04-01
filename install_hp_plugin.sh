@@ -28,8 +28,8 @@ if ! wget -q https://www.openprinting.org/download/printdriver/auxfiles/HP/plugi
     exit 1
 fi
 
-log "Installing expect using dnf5..."
-if ! dnf5 install -y expect; then
+log "Installing expect and spawn using dnf5..."
+if ! dnf5 install -y expect spawn; then
     log "Failed to install expect."
     exit 1
 fi
@@ -71,7 +71,7 @@ fi
 # Clean up: delete the expect script, the downloaded files, and remove the user
 log "Cleaning up..."
 rm -f install_hp_plugin.exp hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
-dnf5 remove -y expect
+dnf5 remove -y expect spawn
 if ! userdel "$username"; then
     log "Failed to remove user $username."
     exit 1
