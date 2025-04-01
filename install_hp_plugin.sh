@@ -17,9 +17,14 @@ if ! useradd -M -G wheel -p "$(openssl passwd -1 "$password")" "$username"; then
     exit 1
 fi
 
-log "Downloading the plugin file..."
+log "Downloading the plugin files..."
 if ! wget -q https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run; then
     log "Failed to download the plugin file."
+    exit 1
+fi
+
+if ! wget -q https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run.asc; then
+    log "Failed to download the .asc file."
     exit 1
 fi
 
@@ -38,8 +43,8 @@ cat << EOF > install_hp_plugin.exp
 set username [lindex \$argv 0]
 set password [lindex \$argv 1]
 
-# Run the hp-plugin command with the -y and --no-verify options
-spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run -y --no-verify"
+# Run the hp-plugin command with the -y option
+spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run -y"
 expect {
     "ExpectedPrompt" {
         sleep 1  # Delay before sending password
@@ -59,9 +64,9 @@ if ! ./install_hp_plugin.exp "$username" "$password"; then
     exit 1
 fi
 
-# Clean up: delete the expect script and the downloaded .run file, and remove the user
+# Clean up: delete the expect script, the downloaded files, and remove the user
 log "Cleaning up..."
-rm -f install_hp_plugin.exp hplip-3.24.4-plugin.run
+rm -f install_hp_plugin.exp hplip-3.24.4-plugin.run hplip-3.24.4-plugin.run.asc
 dnf5 remove -y expect
 if ! userdel "$username"; then
     log "Failed to remove user $username."
