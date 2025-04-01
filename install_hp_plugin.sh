@@ -63,7 +63,7 @@ chmod +x install_hp_plugin.exp
 
 # Run the expect script with the username and password as arguments
 log "Running hp-plugin installation..."
-if ! ./install_hp_plugin.exp "$username" "$password"; then
+if ! expect ./install_hp_plugin.exp "$username" "$password"; then
     log "Failed to run the hp-plugin installation."
     exit 1
 fi
