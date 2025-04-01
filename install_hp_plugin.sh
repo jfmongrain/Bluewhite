@@ -41,7 +41,7 @@ set password [lindex \$argv 1]
 # Run the hp-plugin command with the -y and --no-verify options
 spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run -y --no-verify"
 expect {
-    -re ".*[Pp]assword.*" {
+    "ExpectedPrompt" {
         sleep 1  # Delay before sending password
         send "\$password\r"
     }
