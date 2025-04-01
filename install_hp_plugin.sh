@@ -46,7 +46,7 @@ set password [lindex \$argv 1]
 # Run the hp-plugin command
 spawn runuser -u \$username -- sh -c "hp-plugin -p hplip-3.24.4-plugin.run"
 expect {
-    "ExpectedPrompt1" {
+    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         sleep 1  # Delay before sending "y"
         send "y\r"
         exp_continue
