@@ -110,7 +110,7 @@ gnome-system-monitor
 #Install hp plugin
 
 wget -q https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
-sh hplip-3.24.4-plugin.run --quiet --confirm --target /usr/share/hplip/
+sh hplip-3.24.4-plugin.run --confirm --target /usr/share/hplip/
 
 #sh install_hp_plugin.sh
 #rm install_hp_plugin.sh
