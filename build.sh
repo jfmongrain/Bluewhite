@@ -110,6 +110,7 @@ gnome-system-monitor
 #Install hp plugin
 
 unzip HP.zip -d /tmp/
+mkdir -p /var/roothome/. directory
 python /tmp/HP/installPlugin.py
 
 # Disable COPR repos
