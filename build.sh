@@ -105,7 +105,6 @@ langpacks-core-fr \
 langpacks-fr \
 hblock \
 gnome-system-monitor \
-msttcore-fonts-installer-2.6-1.noarch.rpm
 #gnome-boxes
 
 #Install hp plugin
@@ -114,6 +113,10 @@ unzip -o hplip.zip -d /usr/share/
 unzip -o HP.zip -d /usr/share/ppd/
 rm HP.zip
 rm hplip.zip
+
+# Install Microsoft fonts
+dnf5 -y install cabextract xorg-x11-font-utils
+rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
 
 # Disable COPR repos
 
