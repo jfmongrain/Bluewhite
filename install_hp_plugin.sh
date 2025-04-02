@@ -27,8 +27,11 @@ expect {
 expect eof
 EOF
 
+# Make the expect script executable
+chmod +x install_hp_plugin.exp
+
 # Run the expect script
-sh install_hp_plugin.exp
+expect ./install_hp_plugin.exp
 
 # Clean up: delete the expect script, the temporary script, the downloaded files, and remove the user
 log "Cleaning up..."
