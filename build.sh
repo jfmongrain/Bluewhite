@@ -46,6 +46,7 @@ yaru-theme \
 input-remapper \
 gnome-system-monitor
 
+
 # Remove unused fonts
 
 dnf5 -y remove \
@@ -104,15 +105,11 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 hblock \
-gnome-system-monitor
+gnome-system-monitor \
+gnome-boxes
 #lact-libadwaita
 
 #Install hp plugin
-
-unzip HP.zip -d /tmp/
-mkdir -p /var/roothome/. directory
-cd /tmp/HP/
-python /tmp/HP/installPlugin.py
 
 # Disable COPR repos
 
