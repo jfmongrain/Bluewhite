@@ -118,7 +118,7 @@ rm hplip.zip
 #Install Microsoft fonts
 
 dnf5 -y install cabextract xorg-x11-font-utils
-rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
 dnf5 -y remove cabextract xorg-x11-font-utils
 
 # Disable COPR repos
