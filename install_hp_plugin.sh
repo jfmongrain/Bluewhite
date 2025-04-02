@@ -16,21 +16,18 @@ fi
 cat > install_hp_plugin.exp <<EOF
 #!/usr/bin/expect
 
-spawn sh hplip-3.24.4.plugin.run --target /usr/share/hplip/
+spawn sh hplip-3.24.4-plugin.run --target /usr/share/hplip/
 expect {
-    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
+    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ? " {
+        sleep 1  ;# Add a delay of 1 second before sending the response
         send "y\r"
         exp_continue
-    }
-    -re "ExpectedPrompt 2" {
-        send "\$password\r"
     }
 }
 expect eof
 EOF
 
 # Run the expect script
-
 expect ./install_hp_plugin.exp
 
 # Clean up: delete the expect script, the temporary script, the downloaded files, and remove the user
