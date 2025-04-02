@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-#dnf5 -y copr enable ilyaz/LACT
+dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
 
 # Remove packages
@@ -104,9 +104,9 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 hblock \
-gnome-system-monitor
+gnome-system-monitor \
+msttcore-fonts-installer-2.6-1.noarch.rpm
 #gnome-boxes
-#lact-libadwaita
 
 #Install hp plugin
 
@@ -120,12 +120,10 @@ rm hplip.zip
 dnf5 -y install cabextract xorg-x11-font-utils
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 dnf5 -y remove cabextract xorg-x11-font-utils
-rm msttcore-fonts-installer-2.6-1.noarch.rpm
-
 
 # Disable COPR repos
 
-#dnf5 -y copr disable ilyaz/LACT
+dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
 
 #### Example for enabling a System Unit File
