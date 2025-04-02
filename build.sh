@@ -115,12 +115,6 @@ unzip -o HP.zip -d /usr/share/ppd/
 rm HP.zip
 rm hplip.zip
 
-#Install Microsoft fonts
-
-dnf5 -y install cabextract xorg-x11-font-utils
-rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
-dnf5 -y remove cabextract xorg-x11-font-utils
-
 # Disable COPR repos
 
 dnf5 -y copr disable ilyaz/LACT
