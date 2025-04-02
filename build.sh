@@ -119,6 +119,9 @@ rm hplip.zip
 
 dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+dnf5 -y remove curl cabextract xorg-x11-font-utils fontconfig
+rm msttcore-fonts-installer-2.6-1.noarch.rpm
+
 
 # Disable COPR repos
 
