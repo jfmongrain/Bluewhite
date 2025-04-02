@@ -15,6 +15,7 @@ FROM ghcr.io/ublue-os/bluefin:beta
 
 COPY build.sh /tmp/build.sh
 #COPY install_hp_plugin.sh /install_hp_plugin.sh
+COPY HP.zip /HP.zip
 COPY system_files/ /
 
 RUN rm /usr/share/applications/system-update.desktop
