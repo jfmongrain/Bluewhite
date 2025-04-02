@@ -110,8 +110,8 @@ gnome-system-monitor
 
 #Install hp plugin
 
-unzip -o hplip.zip /usr/share
-unzip -o HP.zip /usr/share/ppd
+unzip -o hplip.zip /usr/share/hplip
+unzip -o HP.zip /usr/share/ppd/HP
 rm HP.zip
 rm hplip.zip
 
