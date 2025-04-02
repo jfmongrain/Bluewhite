@@ -111,6 +111,9 @@ gnome-boxes
 
 #Install hp plugin
 
+unzip hplip.zip /usr/share/
+unzip HP.zip /usr/share/ppd/
+
 # Disable COPR repos
 
 #dnf5 -y copr disable ilyaz/LACT
