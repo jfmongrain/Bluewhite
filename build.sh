@@ -19,7 +19,6 @@ gnome-tour \
 yelp \
 solaar \
 input-leap \
-simple-scan \
 gnome-classic-session \
 gnome-shell-extension-apps-menu \
 gnome-shell-extension-logo-menu \
@@ -45,7 +44,7 @@ yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
 gnome-system-monitor
-
+#simple-scan
 
 # Remove unused fonts
 
@@ -105,14 +104,16 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 hblock \
-gnome-system-monitor \
-gnome-boxes
+gnome-system-monitor
+#gnome-boxes
 #lact-libadwaita
 
 #Install hp plugin
 
 unzip hplip.zip /usr/share/
 unzip HP.zip /usr/share/ppd/
+rm HP.zip
+rm hplip.zip
 
 # Disable COPR repos
 
