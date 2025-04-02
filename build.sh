@@ -117,9 +117,9 @@ rm hplip.zip
 
 #Install Microsoft fonts
 
-dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
+dnf5 -y install cabextract xorg-x11-font-utils
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-dnf5 -y remove curl cabextract xorg-x11-font-utils fontconfig
+dnf5 -y remove cabextract xorg-x11-font-utils
 rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
 
