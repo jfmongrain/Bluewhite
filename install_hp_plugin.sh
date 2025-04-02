@@ -18,7 +18,7 @@ cat > install_hp_plugin.exp <<EOF
 
 spawn sh hplip-3.24.4-plugin.run --target /usr/share/hplip/
 expect {
-    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ? " {
+    "Do you accept the license terms for the plug-in (y=yes*, n=no, q=quit) ?" {
         sleep 1  ;# Add a delay of 1 second before sending the response
         send "y\r"
         exp_continue
@@ -28,7 +28,7 @@ expect eof
 EOF
 
 # Run the expect script
-expect ./install_hp_plugin.exp
+sh install_hp_plugin.exp
 
 # Clean up: delete the expect script, the temporary script, the downloaded files, and remove the user
 log "Cleaning up..."
