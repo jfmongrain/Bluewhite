@@ -4,7 +4,6 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-dnf5 -y copr enable ilyaz/LACT
 dnf5 -y copr enable pesader/hblock
 
 # Remove packages
@@ -43,8 +42,8 @@ yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
-gnome-system-monitor
-#simple-scan
+gnome-system-monitor \
+simple-scan
 
 # Remove unused fonts
 
@@ -105,22 +104,16 @@ langpacks-core-fr \
 langpacks-fr \
 hblock \
 gnome-system-monitor \
-#gnome-boxes
-
-#Install hp plugin
-
-unzip -o hplip.zip -d /usr/share/
-unzip -o HP.zip -d /usr/share/ppd/
-rm HP.zip
-rm hplip.zip
+cabextract \
+xorg-x11-font-utils
 
 # Install Microsoft fonts
-dnf5 -y install cabextract xorg-x11-font-utils
+
 rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
+rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
 # Disable COPR repos
 
-dnf5 -y copr disable ilyaz/LACT
 dnf5 -y copr disable pesader/hblock
 
 #### Example for enabling a System Unit File
