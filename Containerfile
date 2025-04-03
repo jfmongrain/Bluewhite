@@ -14,9 +14,6 @@ FROM ghcr.io/ublue-os/bluefin:beta
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-#COPY install_hp_plugin.sh /install_hp_plugin.sh
-COPY HP.zip /HP.zip
-COPY hplip.zip /hplip.zip
 COPY msttcore-fonts-installer-2.6-1.noarch.rpm /msttcore-fonts-installer-2.6-1.noarch.rpm
 COPY system_files/ /
 
