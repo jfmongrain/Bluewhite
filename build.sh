@@ -119,7 +119,7 @@ xorg-x11-font-utils
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.25.2-plugin.run
 chmod +x hplip-3.25.2-plugin.run
 mkdir -p /var/roothome/
-yes y | sh hplip-3.25.2-plugin.run --noprogress --accept --nox11 -- -i
+echo y | sh hplip-3.25.2-plugin.run --noprogress --accept --nox11 -- -i
 
 
 # Disable COPR repos
