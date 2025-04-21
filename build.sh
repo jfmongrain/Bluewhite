@@ -117,6 +117,7 @@ rm msttcore-fonts-installer-2.6-1.noarch.rpm
 #sh installhpplugin.sh
 #rm installhpplugin.sh
 wget -q https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.24.4-plugin.run
+chmod +x hplip-3.24.4-plugin.run
 su root -c "yes y | hplip-3.24.4-plugin.run --noprogress --accept --nox11 -- -i"
 
 
