@@ -109,13 +109,10 @@ xorg-x11-font-utils
 
 # Install Microsoft fonts
 
-#rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
-#rm msttcore-fonts-installer-2.6-1.noarch.rpm
+rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
+rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
 # Install hp plugin
-#chmod +x installhpplugin.sh
-#sh installhpplugin.sh
-#rm installhpplugin.sh
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.25.2-plugin.run
 chmod +x hplip-3.25.2-plugin.run
 mkdir -p /var/roothome/
