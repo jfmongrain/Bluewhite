@@ -57,6 +57,6 @@ if [ ! -z "$INSTALL_PLUGIN_VERSION" ]; then
   chmod +x "$PLUGIN_FILE"
   echo "Starting plugin install..."
   # has to run as root in order to prevent erroneous invisible password prompt after license accept
-  su root -c "yes y | $PLUGIN_FILE --noprogress --accept --nox11 -- -i"
+  su root -c "yes y | sh $PLUGIN_FILE --noprogress --accept --nox11 -- -i"
   echo "HPLIP plugin installed!"
 fi
