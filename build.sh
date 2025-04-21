@@ -112,6 +112,11 @@ xorg-x11-font-utils
 rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
 rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
+# Install hp plugin
+chmod +x installhpplugin.sh
+sh installhpplugin.sh
+rm installhpplugin.sh
+
 # Disable COPR repos
 
 dnf5 -y copr disable pesader/hblock
