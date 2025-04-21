@@ -16,6 +16,7 @@ FROM ghcr.io/ublue-os/bluefin:latest
 COPY build.sh /tmp/build.sh
 COPY msttcore-fonts-installer-2.6-1.noarch.rpm /msttcore-fonts-installer-2.6-1.noarch.rpm
 COPY system_files/ /
+COPY installhpplugin.sh /
 
 RUN rm /usr/share/applications/system-update.desktop
 RUN rm /usr/share/applications/documentation.desktop
