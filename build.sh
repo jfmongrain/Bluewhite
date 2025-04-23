@@ -117,7 +117,8 @@ rm msttcore-fonts-installer-2.6-1.noarch.rpm
 wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.25.2-plugin.run
 chmod +x hplip-3.25.2-plugin.run
 mkdir -p /var/roothome/
-echo y | sudo su sh hplip-3.25.2-plugin.run --noprogress --accept --nox11 -- -i
+sudo su
+echo y | sh hplip-3.25.2-plugin.run --noprogress --accept --nox11 -- -i
 
 
 # Disable COPR repos
