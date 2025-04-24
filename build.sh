@@ -105,7 +105,7 @@ langpacks-fr \
 hblock \
 gnome-system-monitor \
 cabextract \
-Simple-scan \
+simple-scan \
 xorg-x11-font-utils
 
 # Install Microsoft fonts
