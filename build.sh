@@ -42,8 +42,7 @@ yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
-gnome-system-monitor \
-malcontent
+gnome-system-monitor
 
 # Remove unused fonts
 
