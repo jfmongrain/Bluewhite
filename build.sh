@@ -112,13 +112,15 @@ xorg-x11-font-utils
 rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
 rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
-# Install hp plugin
+# Install Megasync
 
-#wget https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.25.2-plugin.run
-#chmod +x hplip-3.25.2-plugin.run
-#mkdir -p /var/roothome/
-#echo y | sh hplip-3.25.2-plugin.run --noprogress --accept --nox11 -- -i
+wget https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm
+dnf5 -y install "$PWD/megasync-Fedora_42.x86_64.rpm"
 
+# Install Protonmail Bridge
+
+wget https://proton.me/download/bridge/protonmail-bridge-3.19.0-1.x86_64.rpm
+dnf5 -y install protonmail-bridge-3.19.0-1.x86_64.rpm
 
 # Disable COPR repos
 
