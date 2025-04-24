@@ -15,8 +15,8 @@ FROM ghcr.io/ublue-os/bluefin:latest
 
 COPY build.sh /tmp/build.sh
 #COPY msttcore-fonts-installer-2.6-1.noarch.rpm /msttcore-fonts-installer-2.6-1.noarch.rpm
-COPY webcore-fonts-3.0-1.noarch.rpm
-COPY webcore-fonts-vista-3.0-1.noarch.rpm
+COPY webcore-fonts-3.0-1.noarch.rpm /webcore-fonts-3.0-1.noarch.rpm
+COPY webcore-fonts-vista-3.0-1.noarch.rpm /webcore-fonts-vista-3.0-1.noarch.rpm
 COPY system_files/ /
 
 RUN rm /usr/share/applications/system-update.desktop
