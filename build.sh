@@ -103,15 +103,21 @@ langpacks-core-fr \
 langpacks-fr \
 hblock \
 gnome-system-monitor \
-cabextract \
 simple-scan \
-papirus-icon-theme \
-xorg-x11-font-utils
+papirus-icon-theme
+#xorg-x11-font-utils
+#cabextract \
 
 # Install Microsoft fonts
 
-rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
-rm msttcore-fonts-installer-2.6-1.noarch.rpm
+#rpm -i msttcore-fonts-installer-2.6-1.noarch.rpm
+#rm msttcore-fonts-installer-2.6-1.noarch.rpm
+
+rpm -i webcore-fonts-3.0-1.noarch.rpm
+rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
+
+rm webcore-fonts-3.0-1.noarch.rpm
+rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 # Disable COPR repos
 
