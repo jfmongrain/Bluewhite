@@ -42,8 +42,7 @@ yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
-gnome-system-monitor \
-simple-scan
+gnome-system-monitor
 
 # Remove unused fonts
 
@@ -114,13 +113,13 @@ rm msttcore-fonts-installer-2.6-1.noarch.rpm
 
 # Install Megasync
 
-wget https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm
-dnf5 -y install "$PWD/megasync-Fedora_42.x86_64.rpm"
+#wget https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm
+#dnf5 -y install "$PWD/megasync-Fedora_42.x86_64.rpm"
 
 # Install Protonmail Bridge
 
-wget https://proton.me/download/bridge/protonmail-bridge-3.19.0-1.x86_64.rpm
-dnf5 -y install protonmail-bridge-3.19.0-1.x86_64.rpm
+#wget https://proton.me/download/bridge/protonmail-bridge-3.19.0-1.x86_64.rpm
+#dnf5 -y install protonmail-bridge-3.19.0-1.x86_64.rpm
 
 # Disable COPR repos
 
