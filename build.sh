@@ -105,6 +105,7 @@ hblock \
 gnome-system-monitor \
 cabextract \
 simple-scan \
+papirus-icon-theme \
 xorg-x11-font-utils
 
 # Install Microsoft fonts
