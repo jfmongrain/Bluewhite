@@ -42,7 +42,9 @@ yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
 gnome-shell-extension-tailscale-gnome-qs \
-gnome-system-monitor
+gnome-system-monitor \
+mozc \
+ibus-typing-booster
 
 
 # Remove unused fonts
