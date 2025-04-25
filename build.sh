@@ -116,11 +116,6 @@ rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
 rm webcore-fonts-3.0-1.noarch.rpm
 rm webcore-fonts-vista-3.0-1.noarch.rpm
 
-# Install Megasync
-
-wget https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm && dnf5 install -y "$PWD/megasync-Fedora_42.x86_64.rpm"
-rm megasync-Fedora_42.x86_64.rpm
-
 # Disable COPR repos
 
 dnf5 -y copr disable pesader/hblock
