@@ -5,7 +5,6 @@ set -ouex pipefail
 # Enable COPR repos
 
 dnf5 -y copr enable pesader/hblock
-dnf5 -y copr enable jflory7/proton-bridge 
 
 # Remove packages
 
@@ -105,7 +104,6 @@ langpacks-core-fr \
 langpacks-fr \
 hblock \
 gnome-system-monitor \
-protonmail-bridge \
 simple-scan
 
 # Install Microsoft fonts
@@ -119,7 +117,6 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 # Disable COPR repos
 
 dnf5 -y copr disable pesader/hblock
-dnf5 -y copr disable jflory7/proton-bridge
 
 #### Example for enabling a System Unit File
 
