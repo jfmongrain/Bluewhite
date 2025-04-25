@@ -41,8 +41,9 @@ yaru-gtk3-theme \
 yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
+gnome-shell-extension-tailscale-gnome-qs \
 gnome-system-monitor
-# gnome-shell-extension-tailscale-gnome-qs
+
 
 # Remove unused fonts
 
