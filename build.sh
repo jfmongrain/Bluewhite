@@ -105,7 +105,7 @@ langpacks-core-fr \
 langpacks-fr \
 hblock \
 gnome-system-monitor \
-proton-bridge \
+protonmail-bridge \
 simple-scan
 
 # Install Microsoft fonts
