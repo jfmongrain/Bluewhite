@@ -30,7 +30,6 @@ gnome-shell-extension-window-list \
 gnome-shell-extension-blur-my-shell \
 gnome-shell-extension-search-light \
 gnome-shell-extension-user-theme \
-gnome-shell-extension-tailscale-gnome-qs \
 nautilus-gsconnect \
 gnome-shell-extension-gsconnect \
 gnome-shell-theme-yaru \
@@ -43,6 +42,7 @@ yaru-gtk2-theme \
 yaru-theme \
 input-remapper \
 gnome-system-monitor
+# gnome-shell-extension-tailscale-gnome-qs
 
 # Remove unused fonts
 
