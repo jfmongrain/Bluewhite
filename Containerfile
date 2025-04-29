@@ -16,6 +16,7 @@ FROM ghcr.io/ublue-os/bluefin:latest
 COPY build.sh /tmp/build.sh
 COPY webcore-fonts-3.0-1.noarch.rpm /webcore-fonts-3.0-1.noarch.rpm
 COPY webcore-fonts-vista-3.0-1.noarch.rpm /webcore-fonts-vista-3.0-1.noarch.rpm
+COPY hp-pluging-latest-i.X86_64.rpm /hp-pluging-latest-i.X86_64.rpm
 COPY system_files/ /
 
 RUN rm /usr/share/applications/system-update.desktop
