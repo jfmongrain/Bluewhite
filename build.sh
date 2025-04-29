@@ -17,8 +17,6 @@ ibus-anthy-python \
 ibus-m17n \
 gnome-tour \
 yelp \
-solaar \
-input-leap \
 gnome-classic-session \
 gnome-shell-extension-apps-menu \
 gnome-shell-extension-logo-menu \
