@@ -1,7 +1,7 @@
-#FROM ghcr.io/ublue-os/bluefin:latest
+FROM ghcr.io/ublue-os/bluefin:stable
 
 ## Other possible base images include:
-FROM ghcr.io/ublue-os/bazzite-gnome:latest
+# FROM ghcr.io/ublue-os/bazzite-gnome:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
 # 
 # ... and so on, here are more base images
