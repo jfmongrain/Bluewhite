@@ -104,8 +104,8 @@ dnf -y install \
 langpacks-core-fr \
 langpacks-fr \
 gnome-system-monitor \
-simple-scan \
-hplip
+simple-scan
+#hplip
 #hblock
 
 # Install Microsoft fonts
