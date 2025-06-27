@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/bluefin:stable
+FROM ghcr.io/ublue-os/bluefin:lts-testing
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite-gnome:latest
