@@ -119,6 +119,6 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 #dnf -y copr disable pesader/hblock
 
-#### Example for enabling a System Unit File
+#### Enabling System Unit Files
 
-# systemctl enable podman.socket
+systemctl enable hp-plugin-install
