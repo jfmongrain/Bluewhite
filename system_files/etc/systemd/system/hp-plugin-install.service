@@ -1,0 +1,18 @@
+[Unit]
+Description=HP plugin install
+Wants=local-fs.target printer.target network-online.target
+After=local-fs.target printer.target network-online.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/cp /usr/bin/hp-plugin-download /usr/local/bin/hp-plugin-download-mod
+ExecStartPre=/bin/sh -c "sed -i 's|/usr/bin/curl|/usr/bin/curl --fail|' /usr/local/bin/hp-plugin-download-mod"
+ExecStartPre=/bin/sh -c "sed -i 's|download $${link}|if [ ! -e ~/.hplip/$${PLUGIN_FILE} ]; then download $${link}; fi|' /usr/local/bin/hp-plugin-download-mod"
+ExecStartPre=/bin/sh -c "sed -i 's|/usr/bin/rm -f ~/.hplip/$${PLUGIN_FILE} &> /dev/null||' /usr/local/bin/hp-plugin-download-mod"
+ExecStartPre=/bin/sh -c "sed -i 's|^/usr/bin/bash.*|/usr/bin/bash ~/.hplip/$${PLUGIN_FILE} --quiet -- --interactive|' /usr/local/bin/hp-plugin-download-mod"
+ExecStartPre=/bin/sh -c "sed -i 's|~/.hplip|/usr/local/share/hplip|g' /usr/local/bin/hp-plugin-download-mod"
+ExecStartPre=-rpm-ostree usroverlay
+ExecStart=/bin/sh -c "yes '' | /usr/local/bin/hp-plugin-download-mod"
+# ExecStartPost=rm /usr/local/bin/hp-plugin-download-mod
+[Install]
+WantedBy=printer.target
