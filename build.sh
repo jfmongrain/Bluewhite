@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-dnf -y copr enable pesader/hblock
+#dnf -y copr enable pesader/hblock
 #dnf5 -y copr enable gloriouseggroll/nobara-42 
 
 # Remove packages
@@ -120,7 +120,7 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 # Disable COPR repos
 
-dnf -y copr disable pesader/hblock
+#dnf -y copr disable pesader/hblock
 #dnf5 -y copr disable gloriouseggroll/nobara-42 
 
 #### Example for enabling a System Unit File
