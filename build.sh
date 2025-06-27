@@ -4,8 +4,8 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
-#dnf -y copr enable pesader/hblock
+#dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
+dnf -y copr enable pesader/hblock
 
 # Remove packages
 
