@@ -123,4 +123,13 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 #### Enabling System Unit Files
 
-systemctl enable hp-plugin-install
+#systemctl enable hp-plugin-install
+
+cp /usr/bin/hp-plugin-download /usr/local/bin/hp-plugin-download-mod
+sh -c "sed -i 's|/usr/bin/curl|/usr/bin/curl --fail|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|download $${link}|if [ ! -e ~/.hplip/$${PLUGIN_FILE} ]; then download $${link}; fi|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|/usr/bin/rm -f ~/.hplip/$${PLUGIN_FILE} &> /dev/null||' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|^/usr/bin/bash.*|/usr/bin/bash ~/.hplip/$${PLUGIN_FILE} --quiet -- --interactive|' /usr/local/bin/hp-plugin-download-mod"
+sh -c "sed -i 's|~/.hplip|/usr/local/share/hplip|g' /usr/local/bin/hp-plugin-download-mod"
+sh -c "yes '' | /usr/local/bin/hp-plugin-download-mod"
+# ExecStartPost=rm /usr/local/bin/hp-plugin-download-mod
