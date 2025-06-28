@@ -121,9 +121,8 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 # Change kernel version 
 
 dnf config-manager --set-disabled "centos-hyperscale,centos-hyperscale-kernel"
-dnf remove -y kernel-hyperscale
-dnf install -y kernel
-dnf update -y
+dnf --disablerepo="centos-hyperscale" --disablerepo="centos-hyperscale-kernel" -y update kernel
+#dnf reinstall -y kernel
 
 # Disable COPR repos
 
