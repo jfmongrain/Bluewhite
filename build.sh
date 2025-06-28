@@ -7,10 +7,6 @@ set -ouex pipefail
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
 #dnf -y copr enable pesader/hblock
 
-# Change kernel version 
-
-dnf swap kernel-6.14.8-0.hs1.hsk.el10.x86_64 kernel-lts
-
 # Remove packages
 
 dnf -y remove \
@@ -121,6 +117,13 @@ rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
 
 rm webcore-fonts-3.0-1.noarch.rpm
 rm webcore-fonts-vista-3.0-1.noarch.rpm
+
+# Change kernel version 
+
+dnf config-manager --set-disabled "centos-hyperscale,centos-hyperscale-kernel"
+dnf remove -y kernel-hyperscale
+dnf install -y kernel
+dnf update -y
 
 # Disable COPR repos
 
