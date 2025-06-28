@@ -9,7 +9,7 @@ set -ouex pipefail
 
 # Change kernel version 
 
-dnf swap kernel-6.14.8-0.hs1.hsk.el10.x86_64 kernel-6.14.6-0.hs1.hsk.el10.x86_64
+dnf swap kernel-6.14.8-0.hs1.hsk.el10.x86_64 kernel-lts
 
 # Remove packages
 
