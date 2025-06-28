@@ -8,7 +8,8 @@ set -ouex pipefail
 dnf -y remove centos-release-hyperscale-kernel
 dnf config-manager --set-disabled "centos-hyperscale"
 dnf --disablerepo="centos-hyperscale" -y remove kernel*
-rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+
+#rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 yum install https://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm
 dnf --disablerepo="centos-hyperscale" --enablerepo=elrepo-kernel -y install kernel-ml
 
