@@ -105,8 +105,8 @@ langpacks-core-fr \
 langpacks-fr \
 gnome-system-monitor \
 simple-scan \
-hplip
-# evince-thumbnailer
+hplip \
+evince-thumbnailer
 #hblock
 
 # Install Microsoft fonts
@@ -114,15 +114,10 @@ hplip
 rpm -i webcore-fonts-3.0-1.noarch.rpm
 rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
 
-
 rm webcore-fonts-3.0-1.noarch.rpm
 rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 # Change kernel version 
-
-dnf config-manager --set-disabled "centos-hyperscale,centos-hyperscale-kernel"
-dnf --disablerepo="centos-hyperscale" --disablerepo="centos-hyperscale-kernel" -y reinstall kernel
-#dnf reinstall -y kernel
 
 # Disable COPR repos
 
