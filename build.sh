@@ -6,7 +6,7 @@ set -ouex pipefail
 # Change kernel version 
 
 dnf -y install centos-release-hyperscale-experimental
-dnf -y install kernel-6.14.6-0.hs1.hsk.el10
+dnf -y install kernel-6.14.6-0.hs1.hsk.el10.x86_64
 
 
 
