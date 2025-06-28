@@ -119,6 +119,9 @@ rm webcore-fonts-vista-3.0-1.noarch.rpm
 
 # Change kernel version 
 
+dnf -y swap --allowerasing kernel-6.14.8-0.hs1.hsk.el10 kernel-6.14.6-0.hs1.hsk.el10
+
+
 # Disable COPR repos
 
 #dnf -y copr disable pesader/hblock
