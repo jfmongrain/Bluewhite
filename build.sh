@@ -7,6 +7,10 @@ set -ouex pipefail
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
 #dnf -y copr enable pesader/hblock
 
+# Change kernel version 
+
+dnf swap kernel-6.14.8-0.hs1.hsk.el10.x86_64 kernel-6.14.6-0.hs1.hsk.el10.x86_64
+
 # Remove packages
 
 dnf -y remove \
@@ -105,7 +109,8 @@ langpacks-core-fr \
 langpacks-fr \
 gnome-system-monitor \
 simple-scan \
-hplip
+hplip \
+evince-thumbnailer
 #hblock
 
 # Install Microsoft fonts
