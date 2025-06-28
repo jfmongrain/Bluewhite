@@ -9,7 +9,7 @@ dnf -y remove centos-release-hyperscale-kernel
 dnf config-manager --set-disabled "centos-hyperscale"
 dnf --disablerepo="centos-hyperscale" -y remove kernel*
 
-dnf-y install kernel-6.14.6-0.hs1.hsk.el10
+dnf -y install kernel-6.14.6-0.hs1.hsk.el10
 
 # Enable COPR repos
 
