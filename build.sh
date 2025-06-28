@@ -8,7 +8,7 @@ set -ouex pipefail
 dnf -y remove centos-release-hyperscale-kernel
 dnf config-manager --set-disabled "centos-hyperscale"
 dnf --disablerepo="centos-hyperscale" -y remove kernel*
-dnf --disablerepo="centos-hyperscale" --enablerepo="elrepo-kernel" -y install kernel-ml
+dnf --disablerepo="centos-hyperscale" --enablerepo=elrepo-kernel -y install kernel-ml
 
 # Enable COPR repos
 
