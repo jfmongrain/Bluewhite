@@ -105,8 +105,8 @@ langpacks-core-fr \
 langpacks-fr \
 gnome-system-monitor \
 simple-scan \
-hplip \
-evince-thumbnailer
+hplip
+# evince-thumbnailer
 #hblock
 
 # Install Microsoft fonts
