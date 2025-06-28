@@ -9,10 +9,7 @@ dnf -y remove centos-release-hyperscale-kernel
 dnf config-manager --set-disabled "centos-hyperscale"
 dnf --disablerepo="centos-hyperscale" -y remove kernel*
 
-#rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-yum install -y https://www.elrepo.org/elrepo-release-10.el10.elrepo.noarch.rpm
-dnf --enablerepo=elrepo-kernel -y install kernel-lt
-
+dnf-y install kernel-6.14.6-0.hs1.hsk.el10
 
 # Enable COPR repos
 
