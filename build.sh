@@ -2,6 +2,14 @@
 
 set -ouex pipefail
 
+
+# Change kernel version 
+
+dnf -y remove centos-release-hyperscale-kernel
+dnf config-manager --set-disabled "centos-hyperscale"
+dnf --disablerepo="centos-hyperscale" -y remove kernel*
+dnf --disablerepo="centos-hyperscale" -y install kernel kernel-core
+
 # Enable COPR repos
 
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
@@ -117,12 +125,6 @@ rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
 rm webcore-fonts-3.0-1.noarch.rpm
 rm webcore-fonts-vista-3.0-1.noarch.rpm
 
-# Change kernel version 
-
-dnf -y remove centos-release-hyperscale-kernel
-dnf config-manager --set-disabled "centos-hyperscale"
-dnf --disablerepo="centos-hyperscale" -y remove kernel
-dnf -y install kernel
 
 # Disable COPR repos
 
