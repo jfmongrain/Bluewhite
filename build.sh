@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Downgrade kernel
 
-dnf -y swap kernel-6.14.8-0.hs1.hsk.el10.x86_64  kernel-6.12.0-98.el10.x86_64
+#dnf -y swap kernel-6.14.8-0.hs1.hsk.el10.x86_64  kernel-6.12.0-98.el10.x86_64
 
 # Enable COPR repos
 
