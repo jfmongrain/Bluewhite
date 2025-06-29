@@ -7,10 +7,10 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-dnf -y install yum-utils
+#dnf -y install yum-utils
 dnf -y remove centos-release-hyperscale-kernel
 dnf -y remove kernel*
-yum-config-manager --disable centos-hyperscale-kernel
+#yum-config-manager --disable centos-hyperscale-kernel
 
 dnf -y install kernel kernel-modules kernel-core
 
