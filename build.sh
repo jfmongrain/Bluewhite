@@ -12,7 +12,7 @@ dnf -y remove centos-release-hyperscale-kernel
 dnf -y remove kernel*
 #yum-config-manager --disable centos-hyperscale-kernel
 
-dnf -y install kernel kernel-modules kernel-core
+dnf -y install *kernel*
 
 
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
