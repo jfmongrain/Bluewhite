@@ -2,18 +2,7 @@
 
 set -ouex pipefail
 
-
-# Change kernel version 
-
 # Enable COPR repos
-
-#dnf -y install yum-utils
-dnf -y remove centos-release-hyperscale-kernel
-dnf -y remove kernel*
-#yum-config-manager --disable centos-hyperscale-kernel
-
-dnf -y install *kernel*
-
 
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
 #dnf -y copr enable pesader/hblock
