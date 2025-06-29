@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Downgrade kernel
 
-yum -y downgrade kernel-6.14.6-0.hs1.hsk.el10.x86_64
+yum -y downgrade kernel-6.14.6-0.hs1.hsk.el10
 
 # Enable COPR repos
 
