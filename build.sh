@@ -2,6 +2,10 @@
 
 set -ouex pipefail
 
+# Downgrade kernel
+
+yum -y downgrade kernel 
+
 # Enable COPR repos
 
 #dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
