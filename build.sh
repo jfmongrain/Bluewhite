@@ -20,40 +20,21 @@ ibus-anthy \
 ibus-anthy-python \
 ibus-m17n \
 gnome-tour \
-yelp \
-gnome-classic-session \
-gnome-shell-extension-apps-menu \
 gnome-shell-extension-logo-menu \
-gnome-shell-extension-launch-new-instance \
-gnome-shell-extension-places-menu \
 gnome-shell-extension-appindicator \
 gnome-shell-extension-dash-to-dock \
 gnome-shell-extension-caffeine \
-gnome-shell-extension-window-list \
 gnome-shell-extension-blur-my-shell \
 gnome-shell-extension-search-light \
-gnome-shell-extension-user-theme \
-nautilus-gsconnect \
 gnome-shell-extension-gsconnect \
 gnome-shell-theme-yaru \
-yaru-sound-theme \
-yaru-icon-theme \
-yaru-gtksourceview-theme \
-yaru-gtk4-theme \
-yaru-gtk3-theme \
-yaru-gtk2-theme \
-yaru-theme \
-input-remapper \
-gnome-shell-extension-tailscale-gnome-qs \
-gnome-system-monitor \
-mozc \
-ibus-typing-booster
-
+ibus-typing-booster \
+libzhuyin \
+ibus-libzhuyin
 
 # Remove unused fonts
 
 dnf -y remove \
-google-noto-fonts-all \
 google-noto-sans-mono-cjk-vf-fonts \
 google-noto-serif-cjk-vf-fonts \
 google-noto-naskh-arabic-vf-fonts \
@@ -96,11 +77,7 @@ google-noto-serif-oriya-vf-fonts \
 google-noto-serif-sinhala-vf-fonts \
 google-noto-serif-tamil-vf-fonts \
 google-noto-serif-telugu-vf-fonts \
-google-noto-serif-thai-vf-fonts \
-google-noto-sans-balinese-fonts \
-google-noto-sans-cjk-fonts \
-google-noto-sans-javanese-fonts \
-google-noto-sans-sundanese-fonts
+google-noto-serif-thai-vf-fonts
 
 # Install packages 
 
