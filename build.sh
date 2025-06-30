@@ -92,8 +92,8 @@ hplip
 
 # Install Microsoft fonts
 
-rpm -i webcore-fonts-3.0-1.noarch.rpm
-rpm -i webcore-fonts-vista-3.0-1.noarch.rpm
+rpm -i webcore-fonts-3.0-1.noarch.rpm --noverify --nosignature
+rpm -i webcore-fonts-vista-3.0-1.noarch.rpm --noverify --nosignature
 
 rm webcore-fonts-3.0-1.noarch.rpm
 rm webcore-fonts-vista-3.0-1.noarch.rpm
