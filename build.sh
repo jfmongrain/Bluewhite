@@ -20,6 +20,7 @@ ibus-anthy \
 ibus-anthy-python \
 ibus-m17n \
 gnome-tour \
+gnome-extensions-app \
 gnome-shell-extension-logo-menu \
 gnome-shell-extension-appindicator \
 gnome-shell-extension-dash-to-dock \
