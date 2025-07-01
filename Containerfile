@@ -20,10 +20,10 @@ RUN rm /usr/share/applications/system-update.desktop
 RUN rm /usr/share/applications/documentation.desktop
 RUN rm /usr/share/applications/discourse.desktop
 
-RUN sed -i \
-    -e '/^[baseos]/,/^$/s!^metalink=.!baseurl=https://mirror.freedif.org/CentOS/\$releasever-stream/BaseOS/\$basearch/os/!' \
-    -e '/^[appstream]/,/^$/s!^metalink=.!baseurl=https://mirror.freedif.org/CentOS/\$releasever-stream/AppStream/\$basearch/os/!' \
-    /etc/yum.repos.d/centos.repo
+#RUN sed -i \
+#    -e '/^[baseos]/,/^$/s!^metalink=.!baseurl=https://mirror.freedif.org/CentOS/\$releasever-stream/BaseOS/\$basearch/os/!' \
+#    -e '/^[appstream]/,/^$/s!^metalink=.!baseurl=https://mirror.freedif.org/CentOS/\$releasever-stream/AppStream/\$basearch/os/!' \
+#    /etc/yum.repos.d/centos.repo
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
