@@ -27,7 +27,6 @@ gnome-shell-extension-caffeine \
 gnome-shell-extension-blur-my-shell \
 gnome-shell-extension-search-light \
 gnome-shell-extension-gsconnect \
-gnome-shell-theme-yaru \
 ibus-typing-booster \
 libzhuyin \
 ibus-libzhuyin
