@@ -84,11 +84,12 @@ google-noto-serif-thai-vf-fonts
 dnf -y install \
 langpacks-core-fr \
 langpacks-fr \
-gnome-system-monitor \
 simple-scan \
 hplip
 #evince-thumbnailer
 #hblock
+#gnome-system-monitor
+
 
 # Disable COPR repos
 
