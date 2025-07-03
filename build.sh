@@ -81,12 +81,12 @@ google-noto-serif-thai-vf-fonts
 
 # Install packages 
 
-#dnf -y install \
-#langpacks-core-fr \
-#langpacks-fr \
-#gnome-system-monitor \
-#simple-scan \
-#hplip
+dnf -y install \
+langpacks-core-fr \
+langpacks-fr \
+gnome-system-monitor \
+simple-scan \
+hplip
 #evince-thumbnailer
 #hblock
 
