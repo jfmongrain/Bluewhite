@@ -85,7 +85,8 @@ dnf -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-hplip
+hplip \
+steam-devices
 #evince-thumbnailer
 #hblock
 #gnome-system-monitor
