@@ -13,14 +13,13 @@ set -ouex pipefail
 
 # Remove packages
 
-dnf -y remove \
+dnf5 -y remove \
 ibus-hangul \
 ibus-libpinyin \
 ibus-anthy \
 ibus-anthy-python \
 ibus-m17n \
 gnome-tour \
-gnome-extensions-app \
 gnome-shell-extension-logo-menu \
 gnome-shell-extension-appindicator \
 gnome-shell-extension-dash-to-dock \
@@ -29,12 +28,11 @@ gnome-shell-extension-blur-my-shell \
 gnome-shell-extension-search-light \
 gnome-shell-extension-gsconnect \
 ibus-typing-booster \
-libzhuyin \
-ibus-libzhuyin
+yelp
 
 # Remove unused fonts
 
-dnf -y remove \
+dnf5 -y remove \
 google-noto-sans-mono-cjk-vf-fonts \
 google-noto-serif-cjk-vf-fonts \
 google-noto-naskh-arabic-vf-fonts \
@@ -81,12 +79,12 @@ google-noto-serif-thai-vf-fonts
 
 # Install packages 
 
-dnf -y install \
+dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-simple-scan \
-hplip \
-steam-devices
+simple-scan
+#hplip \
+#steam-devices
 #evince-thumbnailer
 #hblock
 #gnome-system-monitor
