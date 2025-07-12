@@ -27,6 +27,21 @@ gnome-shell-extension-caffeine \
 gnome-shell-extension-blur-my-shell \
 gnome-shell-extension-search-light \
 gnome-shell-extension-gsconnect \
+gnome-shell-extension-apps-menu \
+gnome-shell-extension-launch-new-instance \
+gnome-shell-extension-places-menu \
+gnome-shell-extension-user-theme \
+gnome-shell-extension-window-list \
+gnome-shell-extension-tailscale-gnome-qs \
+gtk-murrine-engine \
+yaru-gtk2-theme \
+yaru-sound-theme \
+yaru-icon-theme \
+yaru-gtksourceview-theme \
+yaru-gtk4-theme \
+yaru-gtk3-theme \
+gnome-shell-theme-yaru \
+gnome-system-monitor \
 ibus-typing-booster \
 yelp
 
@@ -75,6 +90,10 @@ google-noto-serif-oriya-vf-fonts \
 google-noto-serif-sinhala-vf-fonts \
 google-noto-serif-tamil-vf-fonts \
 google-noto-serif-telugu-vf-fonts \
+google-noto-sans-sundanese-fonts \
+google-noto-sans-javanese-fonts \
+google-noto-sans-cjk-fonts \
+google-noto-sans-balinese-fonts \
 google-noto-serif-thai-vf-fonts
 
 # Install packages 
