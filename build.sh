@@ -96,7 +96,7 @@ google-noto-serif-thai-vf-fonts
 dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-simple-scan
+simple-scan \
 hblock
 
 # Disable COPR repos
