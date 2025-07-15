@@ -2,14 +2,9 @@
 
 set -ouex pipefail
 
-# Downgrade kernel
-
-#dnf -y swap kernel-6.14.8-0.hs1.hsk.el10.x86_64  kernel-6.12.0-98.el10.x86_64
-
 # Enable COPR repos
 
-#dnf -y --enablerepo copr:copr.fedorainfracloud.org:pesader:hblock
-#dnf -y copr enable pesader/hblock
+dnf -y copr enable pesader/hblock
 
 # Remove packages
 
@@ -102,16 +97,12 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan
-#hplip \
-#steam-devices
-#evince-thumbnailer
-#hblock
-#gnome-system-monitor
+hblock
 
 # Disable COPR repos
 
-#dnf -y copr disable pesader/hblock
+dnf -y copr disable pesader/hblock
 
-# Enable System Unit Files
+# Enable System Unit Files for HP printer
 
 systemctl enable hp-plugin-install
