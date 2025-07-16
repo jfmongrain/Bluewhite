@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-dnf -y copr enable pesader/hblock
+#dnf -y copr enable pesader/hblock
 
 # Remove packages
 
@@ -96,12 +96,12 @@ google-noto-serif-thai-vf-fonts
 dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-simple-scan \
-hblock
+simple-scan
+#hblock
 
 # Disable COPR repos
 
-dnf -y copr disable pesader/hblock
+#dnf -y copr disable pesader/hblock
 
 # Enable System Unit Files for HP printer
 
