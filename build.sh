@@ -99,12 +99,6 @@ langpacks-fr \
 simple-scan
 #hblock
 
-#Try fix gnome software issue 
-
-dnf5 -y install gnome-software
-dnf5 -y remove gnome-software 
-
-
 # Disable COPR repos
 
 #dnf -y copr disable pesader/hblock
