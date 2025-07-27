@@ -2,23 +2,105 @@
 
 set -ouex pipefail
 
-### Install packages
+# Enable COPR repos
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+# Remove packages
 
-# this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 -y remove \
+ibus-hangul \
+ibus-libpinyin \
+ibus-anthy \
+ibus-anthy-python \
+ibus-m17n \
+gnome-tour \
+gnome-shell-extension-logo-menu \
+gnome-shell-extension-appindicator \
+gnome-shell-extension-dash-to-dock \
+gnome-shell-extension-caffeine \
+gnome-shell-extension-blur-my-shell \
+gnome-shell-extension-search-light \
+gnome-shell-extension-gsconnect \
+gnome-shell-extension-apps-menu \
+gnome-shell-extension-launch-new-instance \
+gnome-shell-extension-places-menu \
+gnome-shell-extension-user-theme \
+gnome-shell-extension-window-list \
+gnome-shell-extension-tailscale-gnome-qs \
+gtk-murrine-engine \
+yaru-gtk2-theme \
+yaru-sound-theme \
+yaru-icon-theme \
+yaru-gtksourceview-theme \
+yaru-gtk4-theme \
+yaru-gtk3-theme \
+gnome-shell-theme-yaru \
+gnome-system-monitor \
+ibus-typing-booster \
+yelp \
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# Remove unused fonts
 
-#### Example for enabling a System Unit File
+dnf5 -y remove \
+google-noto-sans-mono-cjk-vf-fonts \
+google-noto-serif-cjk-vf-fonts \
+google-noto-naskh-arabic-vf-fonts \
+google-noto-sans-arabic-vf-fonts \
+google-noto-sans-armenian-vf-fonts \
+google-noto-sans-bengali-vf-fonts \
+google-noto-sans-canadian-aboriginal-vf-fonts \
+google-noto-sans-cherokee-vf-fonts \
+google-noto-sans-devanagari-vf-fonts \
+google-noto-sans-ethiopic-vf-fonts \
+google-noto-sans-georgian-vf-fonts \
+google-noto-sans-gujarati-vf-fonts \
+google-noto-sans-gurmukhi-vf-fonts \
+google-noto-sans-hebrew-vf-fonts \
+google-noto-sans-kannada-vf-fonts \
+google-noto-sans-khmer-vf-fonts \
+google-noto-sans-lao-vf-fonts \
+google-noto-sans-meetei-mayek-vf-fonts \
+google-noto-sans-ol-chiki-vf-fonts \
+google-noto-sans-oriya-vf-fonts \
+google-noto-sans-sinhala-vf-fonts \
+google-noto-sans-symbols-2-fonts \
+google-noto-sans-symbols-vf-fonts \
+google-noto-sans-tamil-vf-fonts \
+google-noto-sans-telugu-vf-fonts \
+google-noto-sans-thaana-vf-fonts \
+google-noto-sans-thai-vf-fonts \
+google-noto-serif-armenian-vf-fonts \
+google-noto-serif-bengali-vf-fonts \
+google-noto-serif-devanagari-vf-fonts \
+google-noto-serif-ethiopic-vf-fonts \
+google-noto-serif-georgian-vf-fonts \
+google-noto-serif-gujarati-vf-fonts \
+google-noto-serif-gurmukhi-vf-fonts \
+google-noto-serif-hebrew-vf-fonts \
+google-noto-serif-kannada-vf-fonts \
+google-noto-serif-khmer-vf-fonts \
+google-noto-serif-lao-vf-fonts \
+google-noto-serif-oriya-vf-fonts \
+google-noto-serif-sinhala-vf-fonts \
+google-noto-serif-tamil-vf-fonts \
+google-noto-serif-telugu-vf-fonts \
+google-noto-sans-sundanese-fonts \
+google-noto-sans-javanese-fonts \
+google-noto-sans-cjk-fonts \
+google-noto-sans-balinese-fonts \
+google-noto-serif-thai-vf-fonts
 
-systemctl enable podman.socket
+# Install packages 
+
+dnf5 -y install \
+langpacks-core-fr \
+langpacks-fr \
+simple-scan
+#hblock
+
+# Disable COPR repos
+
+#dnf -y copr disable pesader/hblock
+
+# Enable System Unit Files for HP printer
+
+systemctl enable hp-plugin-install
