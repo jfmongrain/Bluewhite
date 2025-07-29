@@ -35,8 +35,7 @@ yaru-gtk4-theme \
 yaru-gtk3-theme \
 gnome-shell-theme-yaru \
 gnome-system-monitor \
-ibus-typing-booster \
-yelp \
+ibus-typing-booster
 
 # Remove unused fonts
 
