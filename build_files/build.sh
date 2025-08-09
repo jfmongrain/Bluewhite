@@ -7,11 +7,13 @@ set -ouex pipefail
 # Remove packages
 
 dnf5 -y remove \
-ibus-hangul \
+libpinyin \
 ibus-libpinyin \
+ibus-typing-booster \
 ibus-anthy \
 ibus-anthy-python \
 ibus-m17n \
+ibus-hangul \
 gnome-tour \
 gnome-shell-extension-logo-menu \
 gnome-shell-extension-appindicator \
@@ -35,8 +37,7 @@ yaru-gtk4-theme \
 yaru-gtk3-theme \
 gnome-shell-theme-yaru \
 gnome-system-monitor \
-ibus-typing-booster \
-libpinyin
+input-remapper
 
 # Remove unused fonts
 
@@ -95,11 +96,8 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan
-#hblock
 
 # Disable COPR repos
-
-#dnf -y copr disable pesader/hblock
 
 # Enable System Unit Files for HP printer
 
