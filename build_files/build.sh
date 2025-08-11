@@ -105,7 +105,7 @@ hblock
 
 git clone https://github.com/ZorinOS/zorin-icon-themes.git
 mv zorin-icon-themes/Zorin /usr/share/icons
-rm zorin-icon-themes
+rm -r zorin-icon-themes
 
 # Disable COPR repos
 
