@@ -101,6 +101,12 @@ langpacks-fr \
 simple-scan \
 hblock
 
+# Install latest Zorin icon theme
+
+git clone https://github.com/ZorinOS/zorin-icon-themes.git
+mv zorin-icon-themes/Zorin /usr/share/icons
+rm zorin-icon-themes
+
 # Disable COPR repos
 
 dnf5 -y copr disable pesader/hblock
