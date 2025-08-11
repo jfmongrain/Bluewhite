@@ -37,7 +37,8 @@ yaru-gtk4-theme \
 yaru-gtk3-theme \
 gnome-shell-theme-yaru \
 gnome-system-monitor \
-input-remapper
+input-remapper \
+firewall-config
 
 # Remove unused fonts
 
