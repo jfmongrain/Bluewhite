@@ -107,6 +107,13 @@ git clone https://github.com/ZorinOS/zorin-icon-themes.git
 mv zorin-icon-themes/Zorin /usr/share/icons
 rm -r zorin-icon-themes
 
+# Install MS fonts
+
+git clone https://github.com/microsoft-fonts/UWP-fonts.git
+mv UWP-fonts/fonts /usr/share/fonts/msfonts
+rm -r /usr/share/fonts/msfonts/non-latin
+rm -r UWP-fonts
+
 # Disable COPR repos
 
 dnf5 -y copr disable pesader/hblock
