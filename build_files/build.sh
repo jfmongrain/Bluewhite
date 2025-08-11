@@ -4,8 +4,7 @@ set -ouex pipefail
 
 # Enable COPR repos
 
-
-# dnf5 -y copr enable pesader/hblock
+dnf5 -y copr enable pesader/hblock
 
 # Remove packages
 
@@ -104,7 +103,7 @@ hblock
 
 # Disable COPR repos
 
-# dnf5 -y copr disable pesader/hblock
+dnf5 -y copr disable pesader/hblock
 
 # Enable System Unit Files for HP printer
 
