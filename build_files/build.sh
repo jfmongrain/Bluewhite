@@ -101,12 +101,6 @@ langpacks-fr \
 simple-scan \
 hblock
 
-# Install Megasync
-
-wget https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm
-dnf5 -y install megasync-Fedora_42.x86_64.rpm
-rm megasync-Fedora_42.x86_64.rpm
-
 # Install latest Zorin icon theme
 
 git clone https://github.com/ZorinOS/zorin-icon-themes.git
