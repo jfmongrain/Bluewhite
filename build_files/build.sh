@@ -14,6 +14,7 @@ ibus-libpinyin \
 ibus-typing-booster \
 ibus-anthy \
 ibus-anthy-python \
+anthy-unicode \
 ibus-m17n \
 ibus-hangul \
 gnome-tour \
@@ -30,6 +31,7 @@ gnome-shell-extension-places-menu \
 gnome-shell-extension-user-theme \
 gnome-shell-extension-window-list \
 gnome-shell-extension-tailscale-gnome-qs \
+gnome-remote-desktop \
 gtk-murrine-engine \
 yaru-gtk2-theme \
 yaru-sound-theme \
@@ -41,7 +43,8 @@ gnome-shell-theme-yaru \
 gnome-system-monitor \
 input-remapper \
 firewall-config \
-vim-common
+vim-common \
+braille-printer-app
 
 # Remove unused fonts
 
@@ -92,7 +95,11 @@ google-noto-sans-sundanese-fonts \
 google-noto-sans-javanese-fonts \
 google-noto-sans-cjk-fonts \
 google-noto-sans-balinese-fonts \
-google-noto-serif-thai-vf-fonts
+google-noto-serif-thai-vf-fonts \
+google-noto-sans-nko-fonts \
+liberation-mono-fonts \
+lineration-sans-fonts \
+liberation-serif-fonts
 
 # Install packages 
 
