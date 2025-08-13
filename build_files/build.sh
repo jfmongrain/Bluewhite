@@ -40,7 +40,8 @@ yaru-gtk3-theme \
 gnome-shell-theme-yaru \
 gnome-system-monitor \
 input-remapper \
-firewall-config
+firewall-config \
+vim-common
 
 # Remove unused fonts
 
