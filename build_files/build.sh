@@ -106,8 +106,8 @@ liberation-serif-fonts
 dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-simple-scan \
-hblock
+simple-scan
+#hblock
 
 # Install latest Zorin icon theme
 
