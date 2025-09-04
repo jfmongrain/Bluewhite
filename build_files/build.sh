@@ -46,7 +46,7 @@ firewall-config \
 vim-common \
 vim-data \
 vim-minimal \
-fish \
+#fish \
 braille-printer-app
 
 # Remove unused fonts
