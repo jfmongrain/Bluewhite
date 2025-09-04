@@ -44,6 +44,9 @@ gnome-system-monitor \
 input-remapper \
 firewall-config \
 vim-common \
+vim-data \
+vim-minimal \
+fish \
 braille-printer-app
 
 # Remove unused fonts
