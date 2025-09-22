@@ -46,7 +46,8 @@ firewall-config \
 vim-common \
 vim-data \
 vim-minimal \
-braille-printer-app
+braille-printer-app \
+evince-thumbnailer
 
 # Remove unused fonts
 
@@ -108,7 +109,8 @@ liberation-serif-fonts
 dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
-simple-scan
+simple-scan \
+papers-thumbnailer
 #hblock
 
 # Install latest Zorin icon theme
