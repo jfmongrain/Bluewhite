@@ -47,8 +47,7 @@ vim-common \
 vim-data \
 vim-minimal \
 braille-printer-app \
-evince-thumbnailer \
-bazaar
+evince-thumbnailer
 
 # Remove unused fonts
 
