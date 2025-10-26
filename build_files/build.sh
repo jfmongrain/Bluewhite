@@ -98,8 +98,7 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papirus-icon-theme \
-fwupd
+papirus-icon-theme
 #hblock
 
 # Install Papyrus icon Folder theme
