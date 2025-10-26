@@ -102,11 +102,9 @@ papirus-icon-theme \
 fwupd
 #hblock
 
-# Install latest Zorin icon theme
-
-#git clone https://github.com/ZorinOS/zorin-icon-themes.git
-#mv zorin-icon-themes/Zorin /usr/share/icons
-#rm -r zorin-icon-themes
+# Install Papyrus icon Folder theme
+wget -qO- https://git.io/papirus-folders-install | sh
+papirus-folders -C yaru --theme Papirus-Dark
 
 # Install MS fonts
 
