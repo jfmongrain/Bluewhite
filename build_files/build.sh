@@ -98,13 +98,13 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papirus-icon-theme
+papirus-icon-theme-dark
 #hblock
 
 # Install Megasync
-wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
-dnf5 -y install megasync-Fedora_43.x86_64.rpm
-rm megasync-Fedora_43.x86_64.rpm
+#wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
+#dnf5 -y install megasync-Fedora_43.x86_64.rpm
+#rm megasync-Fedora_43.x86_64.rpm
 
 # Install Papyrus icon Folder theme
 wget -qO- https://git.io/papirus-folders-install | sh
