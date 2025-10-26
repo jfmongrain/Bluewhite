@@ -28,7 +28,6 @@ gnome-shell-extension-gsconnect \
 gnome-shell-extension-apps-menu \
 gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu \
-gnome-shell-extension-user-theme \
 gnome-shell-extension-window-list \
 gnome-remote-desktop \
 gnome-system-monitor \
@@ -99,7 +98,7 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papers-thumbnailer
+papirus-icon-theme
 #hblock
 
 # Install latest Zorin icon theme
