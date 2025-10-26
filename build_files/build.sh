@@ -30,24 +30,14 @@ gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu \
 gnome-shell-extension-user-theme \
 gnome-shell-extension-window-list \
-gnome-shell-extension-tailscale-gnome-qs \
 gnome-remote-desktop \
-gtk-murrine-engine \
-yaru-gtk2-theme \
-yaru-sound-theme \
-yaru-icon-theme \
-yaru-gtksourceview-theme \
-yaru-gtk4-theme \
-yaru-gtk3-theme \
-gnome-shell-theme-yaru \
 gnome-system-monitor \
 input-remapper \
 firewall-config \
 vim-common \
 vim-data \
 vim-minimal \
-braille-printer-app \
-evince-thumbnailer
+braille-printer-app
 
 # Remove unused fonts
 
@@ -101,7 +91,6 @@ google-noto-sans-balinese-fonts \
 google-noto-serif-thai-vf-fonts \
 google-noto-sans-nko-fonts \
 liberation-mono-fonts \
-lineration-sans-fonts \
 liberation-serif-fonts
 
 # Install packages 
@@ -115,9 +104,9 @@ papers-thumbnailer
 
 # Install latest Zorin icon theme
 
-git clone https://github.com/ZorinOS/zorin-icon-themes.git
-mv zorin-icon-themes/Zorin /usr/share/icons
-rm -r zorin-icon-themes
+#git clone https://github.com/ZorinOS/zorin-icon-themes.git
+#mv zorin-icon-themes/Zorin /usr/share/icons
+#rm -r zorin-icon-themes
 
 # Install MS fonts
 
