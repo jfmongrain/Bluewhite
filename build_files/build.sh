@@ -98,7 +98,8 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papirus-icon-theme
+papirus-icon-theme \
+fwupd
 #hblock
 
 # Install latest Zorin icon theme
