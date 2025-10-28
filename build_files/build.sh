@@ -103,7 +103,7 @@ papirus-icon-theme-dark
 
 # Install Prontonmail Bridge
 wget https://proton.me/download/bridge/protonmail-bridge-3.21.2-1.x86_64.rpm
-dnf5 - y install protonmail-bridge-3.21.2-1.x86_64.rpm
+dnf5 -y install protonmail-bridge-3.21.2-1.x86_64.rpm
 rm -r protonmail-bridge-3.21.2-1.x86_64.rpm
 
 # Install Megasync
