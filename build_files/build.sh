@@ -101,6 +101,11 @@ simple-scan \
 papirus-icon-theme-dark
 #hblock
 
+# Install Prontonmail Bridge
+wget https://proton.me/download/bridge/protonmail-bridge-3.21.2-1.x86_64.rpm
+dnf5 - y install protonmail-bridge-3.21.2-1.x86_64.rpm
+rm -r protonmail-bridge-3.21.2-1.x86_64.rpm
+
 # Install Megasync
 #wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
 #dnf5 -y install megasync-Fedora_43.x86_64.rpm
