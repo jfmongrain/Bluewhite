@@ -36,6 +36,8 @@ firewall-config \
 vim-common \
 vim-data \
 vim-minimal \
+nano \
+htop \
 braille-printer-app
 
 # Remove unused fonts
