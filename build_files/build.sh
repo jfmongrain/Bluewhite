@@ -36,7 +36,6 @@ firewall-config \
 vim-common \
 vim-data \
 vim-minimal \
-vi \
 htop \
 braille-printer-app
 
