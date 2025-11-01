@@ -132,5 +132,5 @@ rm -r UWP-fonts
 # Enable System Unit Files for HP printer
 
 systemctl enable hp-plugin-install
-espanso service register
-espanso start
+#espanso service register
+#espanso start
