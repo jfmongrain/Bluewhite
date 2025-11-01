@@ -6,6 +6,10 @@ set -ouex pipefail
 
 #dnf5 -y copr enable pesader/hblock
 
+# Add Terra repo
+
+dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
 # Remove packages
 
 dnf5 -y remove \
@@ -93,7 +97,8 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papirus-icon-theme-dark
+papirus-icon-theme-dark \
+espanso
 #hblock
 
 # Install Prontonmail Bridge
@@ -121,6 +126,11 @@ rm -r UWP-fonts
 
 #dnf5 -y copr disable pesader/hblock
 
+#Remove Terra repo
+# rm /etc/yum.repos.d/file_name.repo
+
 # Enable System Unit Files for HP printer
 
 systemctl enable hp-plugin-install
+espanso service register
+espanso start
