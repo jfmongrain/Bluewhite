@@ -2,14 +2,6 @@
 
 set -ouex pipefail
 
-# Enable COPR repos
-
-#dnf5 -y copr enable pesader/hblock
-
-# Add Terra repo
-
-dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-
 # Remove packages
 
 dnf5 -y remove \
@@ -97,19 +89,12 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
-papirus-icon-theme-dark \
-espanso
-#hblock
+papirus-icon-theme-dark
 
 # Install Prontonmail Bridge
 wget https://proton.me/download/bridge/protonmail-bridge-3.21.2-1.x86_64.rpm
 dnf5 -y install protonmail-bridge-3.21.2-1.x86_64.rpm
 rm -r protonmail-bridge-3.21.2-1.x86_64.rpm
-
-# Install Megasync
-#wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
-#dnf5 -y install megasync-Fedora_43.x86_64.rpm
-#rm megasync-Fedora_43.x86_64.rpm
 
 # Install Papyrus icon Folder theme
 wget -qO- https://git.io/papirus-folders-install | sh
@@ -122,15 +107,6 @@ mv UWP-fonts/fonts /usr/share/fonts/msfonts
 rm -r /usr/share/fonts/msfonts/non-latin
 rm -r UWP-fonts
 
-# Disable COPR repos
-
-#dnf5 -y copr disable pesader/hblock
-
-#Remove Terra repo
-# rm /etc/yum.repos.d/file_name.repo
-
 # Enable System Unit Files for HP printer
 
 systemctl enable hp-plugin-install
-#espanso service register
-#espanso start
