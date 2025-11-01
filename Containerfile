@@ -20,9 +20,9 @@ FROM ghcr.io/ublue-os/bluefin:latest
 
 COPY system_files/ /
 
-RUN rm /usr/share/applications/system-update.desktop
-RUN rm /usr/share/applications/documentation.desktop
-RUN rm /usr/share/applications/discourse.desktop
+# RUN rm /usr/share/applications/system-update.desktop
+# RUN rm /usr/share/applications/documentation.desktop
+# RUN rm /usr/share/applications/discourse.desktop
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
