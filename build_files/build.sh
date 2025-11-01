@@ -89,6 +89,7 @@ dnf5 -y install \
 langpacks-core-fr \
 langpacks-fr \
 simple-scan \
+xdg-terminal-exec \
 papirus-icon-theme-dark
 
 # Install Prontonmail Bridge
