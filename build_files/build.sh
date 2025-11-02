@@ -93,20 +93,15 @@ xdg-terminal-exec \
 papirus-icon-theme-dark
 
 # Install Prontonmail Bridge
+
 wget https://proton.me/download/bridge/protonmail-bridge-3.21.2-1.x86_64.rpm
 dnf5 -y install protonmail-bridge-3.21.2-1.x86_64.rpm
 rm -r protonmail-bridge-3.21.2-1.x86_64.rpm
 
 # Install Papyrus icon Folder theme
+
 wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders -C yaru --theme Papirus-Dark
-
-# Install MS fonts
-
-git clone https://github.com/microsoft-fonts/UWP-fonts.git
-mv UWP-fonts/fonts /usr/share/fonts/msfonts
-rm -r /usr/share/fonts/msfonts/non-latin
-rm -r UWP-fonts
 
 # Enable System Unit Files for HP printer
 
